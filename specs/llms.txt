@@ -1,0 +1,368 @@
+# Doppler Documentation
+
+> Documentation. Explore our guides and examples to integrate Doppler. From installation to our REST APIs, everything you can do is documented here.
+
+Append .md to any documentation page URL to get its markdown version.
+
+## Guides
+- [Welcome 👋](https://docs.doppler.com/docs/start.md)
+- [Getting Started](https://docs.doppler.com/docs/getting-started.md): Learn how to get started with Doppler for keeping your secrets and application config in sync across machines, hosting providers, CI/CD tools, and secrets managers.
+- [Team Management](https://docs.doppler.com/docs/secretops-beginners-series-team-management.md): Understand Doppler’s user-access permissions model, learn how to set up notifications for Workplace and Project activity, and configure Single Sign-On.
+- [CI/CD & Production](https://docs.doppler.com/docs/secretops-beginners-series-cicd-production.md): Understand Doppler’s secrets orchestration model, learn how to administer integration connections, and establish connection syncs for CI/CD, Staging, and Production.
+- [Managing Secrets](https://docs.doppler.com/docs/secretops-beginners-series-managing-secrets.md): Learn how to take your secrets management skills to the next level using features such as secrets visibility, branch configs, and secrets referencing.
+- [Secrets Rotation](https://docs.doppler.com/docs/secretops-beginners-series-secrets-rotation.md): Understand Doppler's proxied and API secrets rotation models, learn how to eliminate the risk of downtime with the two secret strategy, and set up secrets rotation for database credentials, IAM users, and API keys.
+- [Install CLI](https://docs.doppler.com/docs/install-cli.md): Install the Doppler CLI in local development and production environments.
+- [CLI Guide](https://docs.doppler.com/docs/cli.md): Learn how to get up and running with the Doppler CLI to inject secrets into your applications.
+- [Automatic Restart](https://docs.doppler.com/docs/automatic-restart.md)
+- [Text-based UI (TUI)](https://docs.doppler.com/docs/tui.md): Learn how to use the Doppler TUI to quickly view and edit secrets in your terminal.
+- [Secrets Setup Guide](https://docs.doppler.com/docs/secrets-setup-guide.md): Learn how to setup your project to access secrets for a specific config
+- [Secrets Access Guide](https://docs.doppler.com/docs/accessing-secrets.md)
+- [Secrets Setting Guide](https://docs.doppler.com/docs/setting-secrets.md)
+- [Secret Injection with Templates](https://docs.doppler.com/docs/secret-injection-with-templates.md)
+- [Multiple Commands](https://docs.doppler.com/docs/multiple-commands.md)
+- [Multiple Workplaces](https://docs.doppler.com/docs/multiple-workplaces.md): Learn how to use the CLI across multiple workplaces
+- [Secret Fallback Files](https://docs.doppler.com/docs/automatic-fallbacks.md)
+- [Configure CLI Behavior](https://docs.doppler.com/docs/environment-based-configuration.md)
+- [Troubleshooting](https://docs.doppler.com/docs/cli-troubleshooting.md): Doppler CLI troubleshooting tips.
+- [MCP Server](https://docs.doppler.com/docs/mcp.md): Give agentic tools the ability to interface with the Doppler API.
+- [Visual Studio Code](https://docs.doppler.com/docs/editors-vs-code.md): Level up how you manage secrets locally by integrating Doppler with Visual Studio code.
+- [VSCode Extension](https://docs.doppler.com/docs/vscode-extension.md): Learn how to install and use Doppler's official VSCode extension to manage your secrets.
+- [Go](https://docs.doppler.com/docs/vscode-go.md)
+- [Node.js](https://docs.doppler.com/docs/vscode-nodejs.md): Secure secrets injection for Node.js applications in Visual Studio Code.
+- [Python](https://docs.doppler.com/docs/vscode-python.md): Secure secrets injection for Python applications in Visual Studio Code.
+- [Ruby](https://docs.doppler.com/docs/vscode-ruby.md)
+- [PyCharm](https://docs.doppler.com/docs/pycharm.md)
+- [WebStorm](https://docs.doppler.com/docs/webstorm.md): Learn how to debug Node.js and web applications applications in WebStorm with secrets injected by the Doppler CLI.
+- [Node.js](https://docs.doppler.com/docs/sdk-javascript.md)
+- [Python](https://docs.doppler.com/docs/sdk-python.md)
+- [Other](https://docs.doppler.com/docs/other.md)
+- [C#](https://docs.doppler.com/docs/asp-net-core-csharp.md): Fetch secrets for your C# ASP.NET Core application using the Doppler API.
+- [Ruby](https://docs.doppler.com/docs/ruby.md): Learn how to use Doppler with Ruby applications
+- [Ecto](https://docs.doppler.com/docs/ecto.md): Learn how Doppler can securely store and sync database credentials for your Elixir applications using Ecto by dynamically generating a config/*.exs file at runtime.
+- [PM2](https://docs.doppler.com/docs/pm2.md)
+- [Vite.js](https://docs.doppler.com/docs/vitejs-and-sveltejs.md): Say goodbye to .env files and hello to Doppler as your environment variable manager for Vite and Svelte-powered applications.
+- [Terraform CDK](https://docs.doppler.com/docs/terraform-cdk.md): Learn how to use the Doppler Terraform Provider with Terraform CDK.
+- [Universal Import Guide](https://docs.doppler.com/docs/universal-import-guide.md)
+- [Integration Access Scoping](https://docs.doppler.com/docs/integration-access-scoping.md): Learn how to control who can create and use integration connections
+- [Automated Syncs](https://docs.doppler.com/docs/integrations.md): Numerous ways to integrate Doppler
+- [AWS Secrets Manager](https://docs.doppler.com/docs/aws-secrets-manager.md): Sync environment variables to AWS Secrets Manager.
+- [AWS Parameter Store](https://docs.doppler.com/docs/aws-parameter-store.md): Sync environment variables to AWS Parameter Store.
+- [Azure App Service](https://docs.doppler.com/docs/azure-app-service.md): Learn how to easily sync environment variables to Azure App Service.
+- [Azure Key Vault](https://docs.doppler.com/docs/azure-key-vault.md): Learn how to easily sync environment variables to Azure Key Vault.
+- [Azure DevOps Pipelines](https://docs.doppler.com/docs/azure-devops-pipelines.md): Learn how to easily manage environment variables for your Azure DevOps Pipelines.
+- [Bitbucket Pipelines](https://docs.doppler.com/docs/bitbucket-pipelines.md): Connect Doppler with Bitbucket to access your secrets from inside your pipelines
+- [Bitbucket Sync Integration](https://docs.doppler.com/docs/bitbucket-sync-integration.md): Learn how to use Doppler with Bitbucket Cloud Pipelines.
+- [Bitbucket + Doppler CLI](https://docs.doppler.com/docs/bitbucket-pipelines-doppler-cli.md): Learn how to easily manage environment variables for your Bitbucket Pipelines.
+- [Codefresh](https://docs.doppler.com/docs/codefresh.md): Learn how to use Doppler with your Codefresh pipelines.
+- [CircleCI](https://docs.doppler.com/docs/circleci.md): Learn how to easily sync environment variables to CircleCI.
+- [Cloudflare Pages](https://docs.doppler.com/docs/cloudflare-pages.md): Learn how to sync your Doppler secrets with Cloudflare Pages
+- [Deno Deploy](https://docs.doppler.com/docs/deno-deploy.md): Learn how to use Doppler with your Deno Deploy projects.
+- [DigitalOcean App Platform](https://docs.doppler.com/docs/digitalocean-app-platform.md)
+- [Fly.io](https://docs.doppler.com/docs/flyio.md): Learn how to use Doppler with your Fly.io hosted applications.
+- [GCP Secret Manager](https://docs.doppler.com/docs/gcp-secret-manager.md)
+- [GitHub](https://docs.doppler.com/docs/github.md): Connect Doppler with GitHub to access your secrets from inside your builds.
+- [GitHub Actions](https://docs.doppler.com/docs/github-actions.md): Bring new features and workflows for managing repository secrets with our GitHub integration.
+- [GitHub Codespaces](https://docs.doppler.com/docs/github-codespaces.md): Bring new features and workflows for managing repository secrets with our GitHub integration.
+- [GitHub Dependabot](https://docs.doppler.com/docs/github-dependabot.md): Bring new features and workflows for managing repository secrets with our GitHub integration.
+- [GitHub Copilot Agents](https://docs.doppler.com/docs/github-agents.md): Bring new features and workflows for managing repository secrets with our GitHub integration.
+- [GitLab](https://docs.doppler.com/docs/gitlab.md): Connect Doppler with GitLab or self-hosted GitLab instances to access your secrets from inside your builds.
+- [GitLab Sync Integration](https://docs.doppler.com/docs/gitlab-sync-integration.md): Learn how to use Doppler with GitLab CI/CD.
+- [GitLab + Doppler CLI](https://docs.doppler.com/docs/gitlab-doppler-cli.md): Bring new features and workflows to how you manage GitLab CI/CD variables with Doppler.
+- [Harness](https://docs.doppler.com/docs/harness.md): Learn how to use Doppler with Harness.
+- [Hasura Cloud](https://docs.doppler.com/docs/hasura-cloud.md): Learn how to use Doppler with your Hasura Cloud projects.
+- [Heroku](https://docs.doppler.com/docs/heroku.md)
+- [Laravel Forge](https://docs.doppler.com/docs/laravel-forge-installation.md): Learn how to use Doppler with Laravel Forge.
+- [Netlify](https://docs.doppler.com/docs/netlify.md): Learn how to use Doppler with Netlify.
+- [Postman](https://docs.doppler.com/docs/postman.md): Learn how to use Doppler with Postman.
+- [Railway](https://docs.doppler.com/docs/railway.md): Learn how to sync your Doppler secrets to your Railway projects.
+- [Qovery](https://docs.doppler.com/docs/qovery.md): Learn how to sync your Doppler secrets to your Qovery applications, containers, or jobs.
+- [Render](https://docs.doppler.com/docs/render.md): Learn how to securely inject Doppler secrets into your Render applications.
+- [Supabase](https://docs.doppler.com/docs/supabase.md): Learn how to use Doppler with your Supabase projects
+- [Terraform Cloud](https://docs.doppler.com/docs/terraform-cloud.md): Learn how to sync your Doppler secrets to your Terraform Cloud projects.
+- [Vercel](https://docs.doppler.com/docs/vercel.md)
+- [DIY Syncs](https://docs.doppler.com/docs/diy-syncs.md)
+- [AWS Lambda](https://docs.doppler.com/docs/aws-lambda.md): Learn how to easily manage environment variables for your AWS Lambda functions.
+- [AWS Beanstalk](https://docs.doppler.com/docs/aws-beanstalk.md): Learn how to use Doppler with your AWS Beanstalk deployments.
+- [AWS ECS](https://docs.doppler.com/docs/aws-ecs.md): Learn how to access Doppler secrets in your ECS tasks
+- [BuddyCI](https://docs.doppler.com/docs/buddyci.md): Learn how to use Doppler to provide secrets to CI / CD pipelines in BuddyCI.
+- [Cloudflare Workers](https://docs.doppler.com/docs/cloudflare-workers.md)
+- [Cloud 66](https://docs.doppler.com/docs/cloud-66.md)
+- [Cron](https://docs.doppler.com/docs/cron.md): Learn how to use Doppler with your cron jobs.
+- [DigitalOcean Droplets](https://docs.doppler.com/docs/digitalocean.md): Easily manage environment variables for your DigitalOcean applications
+- [Docker](https://docs.doppler.com/docs/installation-docker.md): Learn how Doppler enables you to distribute config and credentials securely to your Docker containers in a variety of methods using our production-ready guides.
+- [Dockerfile](https://docs.doppler.com/docs/dockerfile.md): Learn how to install the Doppler CLI in your Docker image to inject secrets at container runtime.
+- [Container Env Vars](https://docs.doppler.com/docs/docker-container-env-vars.md)
+- [High Availability](https://docs.doppler.com/docs/docker-high-availability.md): Increase resiliency when using the Doppler CLI in Docker by embedding an encrypted secrets snapshot.
+- [Docker Compose](https://docs.doppler.com/docs/docker-compose.md)
+- [Direnv](https://docs.doppler.com/docs/direnv.md): Learn how to automatically load environment variables in your development environment.
+- [EAS Build](https://docs.doppler.com/docs/eas-build.md): Learn how to use Doppler with EAS Build
+- [Firebase Functions](https://docs.doppler.com/docs/firebase-installation.md): Learn how to integrate Doppler with Firebase Cloud Functions to sync secrets to production and during local development.
+- [GCP Cloud Build](https://docs.doppler.com/docs/gcp-cloud-build.md)
+- [GitPod](https://docs.doppler.com/docs/gitpod.md): Learn how to use Doppler with your GitPod workspaces.
+- [Jenkins](https://docs.doppler.com/docs/jenkins.md): Learn how to integrate Doppler into your Jenkins CI jobs.
+- [Laravel Vapor](https://docs.doppler.com/docs/laravel-vapor.md): Level up how you manage secrets for Laravel Vapor Serverless PHP Apps with Doppler.
+- [Pipedream](https://docs.doppler.com/docs/pipedream.md): Learn how to inject Doppler secrets into your Pipedream steps.
+- [Serverless](https://docs.doppler.com/docs/serverless.md): Learn how to easily manage environment variables for your Serverless applications.
+- [Webapp.io](https://docs.doppler.com/docs/webapp-io.md)
+- [Terraform / OpenTofu](https://docs.doppler.com/docs/terraform.md): Learn how to use the Doppler Terraform Provider to manage your Doppler workplace using Terraform/OpenTofu
+- [Kubernetes](https://docs.doppler.com/docs/kubernetes.md): Simplify secrets management for Kubernetes hosted applications using Doppler
+- [Doppler Kubernetes Operator](https://docs.doppler.com/docs/kubernetes-operator.md): Kubernetes secrets sync automation with deployment auto-reload on secrets change.
+- [Installation & Upgrades](https://docs.doppler.com/docs/doppler-k8s-operator-installation-upgrades.md): Learn how to install and upgrade the Doppler Kubernetes Operator
+- [Syncing Secrets](https://docs.doppler.com/docs/doppler-k8s-operator-syncing-secrets.md)
+- [Using Kubernetes Secrets](https://docs.doppler.com/docs/using-kubernetes-secrets.md): Learn how to use kubernetes secrets in your deployments
+- [Troubleshooting](https://docs.doppler.com/docs/doppler-k8s-operator-troubleshooting.md): Learn how to troubleshoot problems with the Doppler Kubernetes Operator
+- [Uninstalling](https://docs.doppler.com/docs/doppler-k8s-operator-uninstalling.md): Learn how to uninstall the Doppler Kubernetes Operator
+- [Security](https://docs.doppler.com/docs/doppler-k8s-operator-security.md): Learn about security considerations when using the Doppler Kubernetes Operator
+- [Examples](https://docs.doppler.com/docs/doppler-k8s-operator-examples.md)
+- [External Secrets Operator](https://docs.doppler.com/docs/external-secrets-provider.md): Kubernetes secrets sync automation using the External Secrets Operator Doppler provider.
+- [CI/CD Secrets Sync](https://docs.doppler.com/docs/kubernetes-container-env-vars.md): Kubernetes secrets sync automation in CI/CD using the Doppler and Kubernetes CLI.
+- [Doppler CLI in Dockerfile](https://docs.doppler.com/docs/kubernetes-doppler-cli-in-docker.md): Inject secrets at runtime by embedding the Doppler CLI in your Dockerfile.
+- [Rotated Secrets](https://docs.doppler.com/docs/secrets-rotation.md)
+- [AWS Secrets Rotation](https://docs.doppler.com/docs/aws-secrets-rotation.md)
+- [AWS MySQL](https://docs.doppler.com/docs/aws-mysql.md)
+- [AWS MS SQL Server](https://docs.doppler.com/docs/aws-ms-sqlserver.md)
+- [AWS Postgres Rotation](https://docs.doppler.com/docs/aws-postgres.md)
+- [AWS IAM User](https://docs.doppler.com/docs/aws-iam-rotation.md)
+- [Azure Service Principal](https://docs.doppler.com/docs/azure-service-principal.md)
+- [Cloudflare Tokens](https://docs.doppler.com/docs/cloudflare-tokens.md)
+- [GCP Cloud SQL](https://docs.doppler.com/docs/gcp_cloudsql.md)
+- [GCP Service Account](https://docs.doppler.com/docs/gcp-service-account-keys-rotation.md)
+- [MongoDB Atlas](https://docs.doppler.com/docs/mongodb_atlas.md)
+- [OpenAI](https://docs.doppler.com/docs/openai.md)
+- [SendGrid](https://docs.doppler.com/docs/sendgrid.md)
+- [Twilio](https://docs.doppler.com/docs/twilio.md)
+- [Supporting Rotation in your Product](https://docs.doppler.com/docs/supporting-rotation-in-your-product.md)
+- [Dynamic Secrets](https://docs.doppler.com/docs/dynamic-secrets.md)
+- [AWS IAM](https://docs.doppler.com/docs/aws-iam.md)
+- [Azure Service Principal](https://docs.doppler.com/docs/azure-dynamic-service-principal.md)
+- [Workplace Structure](https://docs.doppler.com/docs/workplace-structure.md): Learn how to structure your projects and configs most effectively inside a workplace.
+- [Default Project Environments](https://docs.doppler.com/docs/default-environments.md): Learn how to define a default environment structure every new project will use.
+- [Domain Verification](https://docs.doppler.com/docs/domain-verification.md): Verify your workplace domain to restrict account Single Sign-On to that domain.
+- [Activity Logs](https://docs.doppler.com/docs/workplace-logs.md)
+- [AWS SQS](https://docs.doppler.com/docs/aws-sqs.md): Learn how to forward Activity Logs to an Amazon SQS queue
+- [Datadog](https://docs.doppler.com/docs/datadog.md)
+- [Discord](https://docs.doppler.com/docs/discord.md): Learn how to send workplace Activity Logs to a Discord channel.
+- [Generic HTTPS](https://docs.doppler.com/docs/generic-https.md): Learn how to ship Activity Logs to a generic HTTPS webhook
+- [Microsoft Teams](https://docs.doppler.com/docs/microsoft-teams.md)
+- [Slack](https://docs.doppler.com/docs/slack.md): Learn how to send workplace Activity Logs to a Slack channel.
+- [Splunk](https://docs.doppler.com/docs/splunk.md)
+- [Sumo Logic](https://docs.doppler.com/docs/sumologic.md)
+- [Access Logs](https://docs.doppler.com/docs/access-logs.md)
+- [Enterprise Key Management](https://docs.doppler.com/docs/enterprise-key-management.md): Use a customer-controlled encryption key to enable tokenization in your cloud secrets manager.
+- [AWS EKM](https://docs.doppler.com/docs/ekm-aws.md): EKM configuration guide for AWS KMS
+- [GCP EKM](https://docs.doppler.com/docs/gcp-ekm.md): EKM configuration guide for GCP KMS
+- [Platform Limits](https://docs.doppler.com/docs/platform-limits.md)
+- [High Availability](https://docs.doppler.com/docs/high-availability.md): Learn how to maintain High Availability with your application while using Doppler.
+- [Analytics Dashboard](https://docs.doppler.com/docs/analytics-dashboard.md): Learn how to gain insights into your workplace using analytics dashboards.
+- [Secret Health Dashboard](https://docs.doppler.com/docs/analytics-dashboard-secret-health.md): Get insights into potential issues that may exist with your secrets.
+- [User Provisioning](https://docs.doppler.com/docs/setting-up-saml-sso.md): Enable SAML Single Sign-On and SCIM provisioning for Doppler using your identity provider.
+- [SAML SSO](https://docs.doppler.com/docs/saml-sso.md)
+- [Auth0 SAML SSO](https://docs.doppler.com/docs/auth0-saml.md): Learn how to create a custom Auth0 SAML 2.0 application for Doppler Single Sign-On.
+- [Authentik SAML SSO](https://docs.doppler.com/docs/authentik-saml-sso.md): Learn how to create a custom Authentik SAML application for Doppler Single Sign-On.
+- [AWS SAML SSO](https://docs.doppler.com/docs/aws-saml-sso.md)
+- [Duo SAML SSO](https://docs.doppler.com/docs/duo-saml.md): Learn how to create a custom Duo Generic SAML 2.0 application for Doppler Single Sign-On.
+- [Google SAML SSO](https://docs.doppler.com/docs/google-saml.md): Learn how to create a Google SAML application for Doppler SSO.
+- [JumpCloud SAML SSO](https://docs.doppler.com/docs/jumpcloud-saml.md): Learn how to create a JumpCloud custom SAML application for Doppler SSO.
+- [Microsoft Entra ID SAML SSO](https://docs.doppler.com/docs/microsoft-entra-id-saml.md): Learn how to configure Single Sign-On for Doppler using an Microsoft Entra ID SAML application.
+- [Okta SAML SSO](https://docs.doppler.com/docs/okta-saml.md): Learn how to create a custom Okta SAML 2.0 application for Doppler Single Sign-On.
+- [OneLogin SAML SSO](https://docs.doppler.com/docs/onelogin-saml.md): Learn how to create a OneLogin SAML 2.0 application for Doppler SSO.
+- [SCIM](https://docs.doppler.com/docs/scim.md)
+- [Duo SCIM](https://docs.doppler.com/docs/duo-scim.md): Configure Duo to automatically provision users in Doppler using SCIM.
+- [JumpCloud SCIM](https://docs.doppler.com/docs/jumpcloud-scim.md): Configure JumpCloud to automatically provision users in Doppler using SCIM.
+- [Microsoft Entra ID SCIM](https://docs.doppler.com/docs/microsoft-entra-id-scim.md): Configure Microsoft Entra ID to automatically provision users in Doppler using SCIM.
+- [Okta SCIM](https://docs.doppler.com/docs/okta-scim.md): Configure Okta to automatically provision users in Doppler using SCIM.
+- [OneLogin SCIM](https://docs.doppler.com/docs/onelogin-scim.md): Configure OneLogin to automatically provision users in Doppler using SCIM.
+- [Team Management](https://docs.doppler.com/docs/workplace-team.md): Get up to speed with Doppler's team management and workplace permissions model.
+- [User Groups](https://docs.doppler.com/docs/user-groups.md): Fine-grained project-based access controls for large and enterprise organizations.
+- [Custom Roles](https://docs.doppler.com/docs/custom-roles.md): Create your own custom role types for greater control of permissions assigned to users at the Workplace and Project level.
+- [Advanced Permissions](https://docs.doppler.com/docs/advanced-permissions.md): Learn how to setup more advanced configurations for project access control
+- [Service Accounts](https://docs.doppler.com/docs/service-accounts.md)
+- [Service Account Identities (OIDC)](https://docs.doppler.com/docs/service-account-identities.md)
+- [AWS EC2 OIDC Authentication](https://docs.doppler.com/docs/aws-ec2-oidc.md): Authenticate the Doppler CLI from EC2 instances using AWS IAM identity federation
+- [Doppler Kubernetes Operator OIDC Setup](https://docs.doppler.com/docs/kubernetes-operator-oidc.md): Configure OIDC authentication with the Doppler Kubernetes Operator
+- [GitHub OIDC Examples](https://docs.doppler.com/docs/github-oidc-examples.md): Examples of different ways to use OIDC with GitHub
+- [Multi-Factor Authentication (MFA)](https://docs.doppler.com/docs/multi-factor-authentication.md): Learn how to enable MFA on your Doppler account.
+- [Create Project](https://docs.doppler.com/docs/create-project.md): Create projects for scoping secrets to different applications.
+- [Project Permissions](https://docs.doppler.com/docs/project-permissions.md): Get up to speed with Doppler's project permissions model.
+- [Webhooks](https://docs.doppler.com/docs/webhooks.md): Learn how to use webhooks to integrate Doppler into your continuous delivery workflows.
+- [Project Templates](https://docs.doppler.com/docs/project-templates.md): Automate the creation and configuration of Doppler Projects.
+- [Change Requests](https://docs.doppler.com/docs/change-requests.md): Learn how to use change requests to manage secret changes across your environments
+- [Change Request Policies](https://docs.doppler.com/docs/change-request-policies.md): Learn how to add controls on your change request approval workflow
+- [Configs](https://docs.doppler.com/docs/root-configs.md): Learn about what Configs are and how to use them
+- [Branch Configs](https://docs.doppler.com/docs/branch-configs.md): Learn how to override secrets in your configs.
+- [Config Inheritance](https://docs.doppler.com/docs/config-inheritance.md): Learn how to use Config Inheritance to easily share common secrets across projects.
+- [Service Tokens](https://docs.doppler.com/docs/service-tokens.md): Provide restricted secrets access to applications in live environments.
+- [Trusted IPs](https://docs.doppler.com/docs/trusted-ips.md)
+- [Secrets](https://docs.doppler.com/docs/secrets.md)
+- [Importing Secrets](https://docs.doppler.com/docs/importing-secrets.md): Learn how to easily import your existing secrets into Doppler
+- [Secret Visibility](https://docs.doppler.com/docs/secret-visibility.md): Learn about secret visibility – how it works and how to use it!
+- [Secret Generation](https://docs.doppler.com/docs/secret-generation.md): Learn about how to generate secrets from the Doppler dashboard!
+- [Versioning](https://docs.doppler.com/docs/versioning.md)
+- [Search by Secret Value](https://docs.doppler.com/docs/search-secret-value.md)
+- [Comparing Secrets](https://docs.doppler.com/docs/comparing-secrets.md): Compare secret values across configs and projects to find differences, gaps, and drift.
+- [Security Fact Sheet](https://docs.doppler.com/docs/security-fact-sheet.md): Learn more about Doppler's design, data flow, and general security stance
+- [Doppler Share Security](https://docs.doppler.com/docs/share-security.md): Learn more about Doppler Share's design and data flow
+- [Windows Support](https://docs.doppler.com/docs/windows-support.md): Information on using Doppler under Windows.
+- [Doppler CLI GnuPG Requirement](https://docs.doppler.com/docs/doppler-cli-gnupg-requirement.md): Starting February 9, 2022, the GnuPG package will be required when installing the CLI via the shell script (install.sh) method or when updating the CLI via `doppler update`.
+- [Client.Timeout Exceeded Errors](https://docs.doppler.com/docs/client-timeout-exceeded-errors.md)
+- [Token not found in system keyring](https://docs.doppler.com/docs/token-not-found-in-system-keyring-error.md)
+- [Removal of Deprecated Clients](https://docs.doppler.com/docs/removal-deprecated-packages-scripts.md)
+- [Update Package Install Commands](https://docs.doppler.com/docs/update-package-install-commands.md)
+- [Migrating from @dopplerhq/cli](https://docs.doppler.com/docs/cli-migration.md)
+- [Cleaning Up AWS EKM keys](https://docs.doppler.com/docs/cleaning-up-aws-ekm-keys.md)
+- [FAQS](https://docs.doppler.com/docs/faqs.md)
+- [Doppler SLO](https://docs.doppler.com/docs/service-sla.md)
+
+## API Reference
+- [API Reference](https://docs.doppler.com/reference/api.md)
+- [Auth Token Formats](https://docs.doppler.com/reference/auth-token-formats.md)
+- [Object](https://docs.doppler.com/reference/workplace-object.md): Workplace
+- [Retrieve](https://docs.doppler.com/reference/workplace-get.md)
+- [Update](https://docs.doppler.com/reference/workplace-update.md)
+- [List](https://docs.doppler.com/reference/users-list.md): Get all users within a workplace
+- [Retrieve](https://docs.doppler.com/reference/users-get.md): Get a specific user in a workplace
+- [Update](https://docs.doppler.com/reference/users-update.md): Update a specific user for a workplace
+- [List](https://docs.doppler.com/reference/workplace_roles-list.md)
+- [Retrieve](https://docs.doppler.com/reference/workplace_roles-get.md)
+- [Create](https://docs.doppler.com/reference/workplace_roles-create.md)
+- [Update](https://docs.doppler.com/reference/workplace_roles-update.md)
+- [Delete](https://docs.doppler.com/reference/workplace_roles-delete.md)
+- [List Permissions](https://docs.doppler.com/reference/workplace_roles-list_permissions.md)
+- [Object](https://docs.doppler.com/reference/activity_logs-object.md): Activity Log
+- [List](https://docs.doppler.com/reference/activity_logs-list.md): Activity Logs
+- [Retrieve](https://docs.doppler.com/reference/activity_logs-retrieve.md): Activity Log
+- [Object](https://docs.doppler.com/reference/projects-object.md): Project
+- [List](https://docs.doppler.com/reference/projects-list.md): Projects
+- [Create](https://docs.doppler.com/reference/projects-create.md): Project
+- [Retrieve](https://docs.doppler.com/reference/projects-get.md): Project
+- [Update](https://docs.doppler.com/reference/projects-update.md): Project
+- [Delete](https://docs.doppler.com/reference/projects-delete.md): Project
+- [List](https://docs.doppler.com/reference/project_roles-list.md)
+- [Retrieve](https://docs.doppler.com/reference/project_roles-get.md)
+- [Create](https://docs.doppler.com/reference/project_roles-create.md)
+- [Update](https://docs.doppler.com/reference/project_roles-update.md)
+- [Delete](https://docs.doppler.com/reference/project_roles-delete.md)
+- [List Permissions](https://docs.doppler.com/reference/project_roles-list_permissions.md)
+- [List](https://docs.doppler.com/reference/project_members-list.md)
+- [Retrieve](https://docs.doppler.com/reference/project_members-get.md)
+- [Add](https://docs.doppler.com/reference/project_members-add.md)
+- [Update](https://docs.doppler.com/reference/project_members-update.md)
+- [Delete](https://docs.doppler.com/reference/project_members-delete.md)
+- [Object](https://docs.doppler.com/reference/environments-object.md): Environment
+- [List](https://docs.doppler.com/reference/environments-list.md): Environments
+- [Retrieve](https://docs.doppler.com/reference/environments-get.md): Environment
+- [Create](https://docs.doppler.com/reference/environments-create.md): Environment
+- [Delete](https://docs.doppler.com/reference/environments-delete.md): Environment
+- [Rename](https://docs.doppler.com/reference/environments-rename.md): Environment
+- [Object](https://docs.doppler.com/reference/configs-object.md): Config
+- [List](https://docs.doppler.com/reference/configs-list.md): Fetch all configs.
+- [Create](https://docs.doppler.com/reference/configs-create.md): Create a new branch config.
+- [Retrieve](https://docs.doppler.com/reference/configs-get.md): Fetch a config's details.
+- [Update](https://docs.doppler.com/reference/configs-update.md): Modify an existing config.
+- [Delete](https://docs.doppler.com/reference/configs-delete.md): Permanently delete the config.
+- [Clone](https://docs.doppler.com/reference/configs-clone.md): Create a new branch config by cloning another. This duplicates a branch config and all its secrets.
+- [Lock](https://docs.doppler.com/reference/configs-lock.md): Prevent the config from being renamed or deleted.
+- [Unlock](https://docs.doppler.com/reference/configs-unlock.md): Allow the config to be renamed and/or deleted.
+- [Inheritable](https://docs.doppler.com/reference/configs-inheritable.md): Update the inheritability of a config.
+- [Inherits](https://docs.doppler.com/reference/configs-inherits.md)
+- [Object](https://docs.doppler.com/reference/config_logs-object.md): Config Log
+- [List](https://docs.doppler.com/reference/config_logs-list.md): Config Logs
+- [Retrieve](https://docs.doppler.com/reference/config_logs-get.md): Config Log
+- [Rollback](https://docs.doppler.com/reference/config_logs-rollback.md): Config Log
+- [List](https://docs.doppler.com/reference/configs-list_trusted_ips.md)
+- [Add](https://docs.doppler.com/reference/configs-add_trusted_ip.md)
+- [Delete](https://docs.doppler.com/reference/configs-delete_trusted_ip.md)
+- [List](https://docs.doppler.com/reference/secrets-list.md): Secrets
+- [Retrieve](https://docs.doppler.com/reference/secrets-get.md): Secret
+- [Delete](https://docs.doppler.com/reference/secrets-delete.md): Secret
+- [Update](https://docs.doppler.com/reference/secrets-update.md): Secrets
+- [Download](https://docs.doppler.com/reference/secrets-download.md): Download Secrets
+- [List Names](https://docs.doppler.com/reference/secrets-names.md): Secret Names
+- [Update Note](https://docs.doppler.com/reference/secrets-update_note.md): Set a note on a secret
+- [List](https://docs.doppler.com/reference/integrations-list.md): List all existing integrations
+- [Create](https://docs.doppler.com/reference/integrations-create.md): Create a new external integration.
+- [Retrieve](https://docs.doppler.com/reference/integrations-get.md): Retrieve an existing integration
+- [Get Options](https://docs.doppler.com/reference/get-options.md)
+- [Update](https://docs.doppler.com/reference/integrations-update.md): Update an existing integration.
+- [Delete](https://docs.doppler.com/reference/integrations-delete.md): Delete an existing integration.
+- [List](https://docs.doppler.com/reference/list-2.md)
+- [Retrieve](https://docs.doppler.com/reference/retrieve-2.md)
+- [Add](https://docs.doppler.com/reference/add.md)
+- [Update](https://docs.doppler.com/reference/update-2.md)
+- [Delete](https://docs.doppler.com/reference/delete-1.md)
+- [Create](https://docs.doppler.com/reference/syncs-create.md): Create a new secrets sync.
+- [Retrieve](https://docs.doppler.com/reference/syncs-get.md): Retrieve an existing secrets sync.
+- [Delete](https://docs.doppler.com/reference/syncs-delete.md): Delete an existing sync.
+- [Issue Lease](https://docs.doppler.com/reference/dynamic_secrets-issue_lease.md): Issue a lease for a dynamic secret
+- [Revoke Lease](https://docs.doppler.com/reference/dynamic_secrets-revoke_lease.md)
+- [Object](https://docs.doppler.com/reference/service_tokens-object.md): Service Token
+- [List](https://docs.doppler.com/reference/service_tokens-list.md): Service Tokens
+- [Create](https://docs.doppler.com/reference/service_tokens-create.md): Service Token
+- [Delete](https://docs.doppler.com/reference/service_tokens-delete.md): Service Token
+- [List](https://docs.doppler.com/reference/invites-list.md)
+- [List](https://docs.doppler.com/reference/groups-list.md)
+- [Create](https://docs.doppler.com/reference/groups-create.md)
+- [Retrieve](https://docs.doppler.com/reference/groups-get.md)
+- [Update](https://docs.doppler.com/reference/groups-update.md)
+- [Delete](https://docs.doppler.com/reference/groups-delete.md)
+- [Add Member](https://docs.doppler.com/reference/groups-add_member.md)
+- [Delete Member](https://docs.doppler.com/reference/groups-delete_member.md)
+- [Retrieve Member](https://docs.doppler.com/reference/retrieve-member.md)
+- [List](https://docs.doppler.com/reference/service_accounts-list.md)
+- [Create](https://docs.doppler.com/reference/service_accounts-create.md)
+- [Retrieve](https://docs.doppler.com/reference/service_accounts-get.md)
+- [Update](https://docs.doppler.com/reference/service_accounts-update.md)
+- [Delete](https://docs.doppler.com/reference/service_accounts-delete.md)
+- [List](https://docs.doppler.com/reference/service_account_tokens-list.md): List information about existing service account API tokens.
+- [Create](https://docs.doppler.com/reference/service_account_tokens-create.md): Generate a new service account API token.
+- [Retrieve](https://docs.doppler.com/reference/service_account_tokens-get.md): Retrieve information about a single service account API token.
+- [Delete](https://docs.doppler.com/reference/service_account_tokens-delete.md): Revoke an existing service account API token.
+- [List](https://docs.doppler.com/reference/list.md): List all identities for a service account
+- [Create](https://docs.doppler.com/reference/create.md): Create a new identity for a service account
+- [Retrieve](https://docs.doppler.com/reference/retrieve.md): Get a specific identity
+- [Update](https://docs.doppler.com/reference/update.md): Update an existing identity
+- [Delete](https://docs.doppler.com/reference/delete.md): Delete an identity
+- [List](https://docs.doppler.com/reference/webhooks-list.md): Webhooks
+- [Retrieve](https://docs.doppler.com/reference/webhooks-get.md): Webhook
+- [Add](https://docs.doppler.com/reference/webhooks-add.md): Webhook
+- [Update](https://docs.doppler.com/reference/webhooks-update.md): Webhook
+- [Delete](https://docs.doppler.com/reference/webhooks-delete.md): Webhook
+- [Enable](https://docs.doppler.com/reference/webhooks-enable.md): Webhook
+- [Disable](https://docs.doppler.com/reference/webhooks-disable.md): Webhook
+- [List](https://docs.doppler.com/reference/list-1.md): List existing change requests
+- [Create](https://docs.doppler.com/reference/create-1.md): Create a new change request with one or more change request units
+- [Retrieve](https://docs.doppler.com/reference/retrieve-1.md): Retrieve detailed information about a change request
+- [Update](https://docs.doppler.com/reference/update-1.md): Update an existing change request's metadata and/or units
+- [Update Assignees](https://docs.doppler.com/reference/update-assignees.md): Update the list of assigned reviewers for a change request
+- [Close](https://docs.doppler.com/reference/close.md)
+- [Retrieve Unit](https://docs.doppler.com/reference/retrieve-unit.md): Retrieve detailed information about a change request unit
+- [Update Unit Status](https://docs.doppler.com/reference/update-unit-status.md): Update the status of a change request unit
+- [Review Unit](https://docs.doppler.com/reference/review-unit.md): Submit an approving review for a change request unit
+- [Rescind Review](https://docs.doppler.com/reference/rescind-review.md): Rescind a previously submitted review for a change request unit
+- [Apply Unit](https://docs.doppler.com/reference/apply-unit.md): Apply a change request unit's updates to the target config
+- [List](https://docs.doppler.com/reference/change-request-policies-list.md): List existing change request policies
+- [Create](https://docs.doppler.com/reference/change-request-policies-create.md): Create a new change request policy
+- [Retrieve](https://docs.doppler.com/reference/change-request-policies-get.md): Fetch an existing change request policy
+- [Update](https://docs.doppler.com/reference/change-request-policies-update.md): Update an existing change request policy
+- [Delete](https://docs.doppler.com/reference/change-request-policies-delete.md): Delete an existing change request policy
+- [Revoke](https://docs.doppler.com/reference/auth-revoke.md): Revoke an auth token
+- [OIDC (Service Account Identity)](https://docs.doppler.com/reference/auth-oidc.md): Authenticate via a Service Account Identity with OIDC. Returns a short lived API token.
+- [Me](https://docs.doppler.com/reference/auth-me.md): Get information about a token
+- [Plain Text](https://docs.doppler.com/reference/share-secret.md): Generate a Doppler Share link by sending a plain text secret. This endpoint is not end-to-end encrypted as you are sending the secret in plain text. At no point do we store the plain text secret or the password in our systems. The receive flow the user goes through will be end-to-end encrypted where the encrypted secret will be decrypted on the browser.
+- [E2E Encrypted](https://docs.doppler.com/reference/share-secret-encrypted.md): Generate a Doppler Share link by sending an encrypted secret. The receive flow the user goes through will be end-to-end encrypted where the encrypted secret will be decrypted on the browser.
+- [Audit API Reference](https://docs.doppler.com/reference/audit-api_reference.md)
+- [Workplace](https://docs.doppler.com/reference/audit-get_workplace.md): Get information about the workplace
+- [Workplace Users](https://docs.doppler.com/reference/audit-list_users.md): Get all users of a workplace
+- [Workplace User](https://docs.doppler.com/reference/audit-get_user.md): Get a specific user in a workplace
+
+## Changelog
+- [June 2026](https://docs.doppler.com/changelog/june-2026.md)
+- [May 2026](https://docs.doppler.com/changelog/may-2026.md)
+- [April 2026](https://docs.doppler.com/changelog/april-2026.md)
+- [March 2026](https://docs.doppler.com/changelog/march-2026.md)
+- [February 2026](https://docs.doppler.com/changelog/february-2026.md)
+- [January 2026](https://docs.doppler.com/changelog/january-2026.md)
+- [December 2025](https://docs.doppler.com/changelog/december-2025.md)
+- [November 2025](https://docs.doppler.com/changelog/november-2025.md)
+- [October 2025](https://docs.doppler.com/changelog/october-2025.md)
+- [September 2025](https://docs.doppler.com/changelog/september-2025.md)

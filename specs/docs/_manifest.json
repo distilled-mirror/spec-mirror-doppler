@@ -1,0 +1,706 @@
+{
+  "source": "https://docs.doppler.com/llms.txt",
+  "count": 140,
+  "pages": [
+    {
+      "page": "https://docs.doppler.com/reference/activity_logs-list",
+      "markdown": "https://docs.doppler.com/reference/activity_logs-list.md",
+      "file": "reference/activity_logs-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/activity_logs-object",
+      "markdown": "https://docs.doppler.com/reference/activity_logs-object.md",
+      "file": "reference/activity_logs-object.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/activity_logs-retrieve",
+      "markdown": "https://docs.doppler.com/reference/activity_logs-retrieve.md",
+      "file": "reference/activity_logs-retrieve.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/add",
+      "markdown": "https://docs.doppler.com/reference/add.md",
+      "file": "reference/add.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/api",
+      "markdown": "https://docs.doppler.com/reference/api.md",
+      "file": "reference/api.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/apply-unit",
+      "markdown": "https://docs.doppler.com/reference/apply-unit.md",
+      "file": "reference/apply-unit.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/audit-api_reference",
+      "markdown": "https://docs.doppler.com/reference/audit-api_reference.md",
+      "file": "reference/audit-api_reference.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/audit-get_user",
+      "markdown": "https://docs.doppler.com/reference/audit-get_user.md",
+      "file": "reference/audit-get_user.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/audit-get_workplace",
+      "markdown": "https://docs.doppler.com/reference/audit-get_workplace.md",
+      "file": "reference/audit-get_workplace.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/audit-list_users",
+      "markdown": "https://docs.doppler.com/reference/audit-list_users.md",
+      "file": "reference/audit-list_users.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/auth-me",
+      "markdown": "https://docs.doppler.com/reference/auth-me.md",
+      "file": "reference/auth-me.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/auth-oidc",
+      "markdown": "https://docs.doppler.com/reference/auth-oidc.md",
+      "file": "reference/auth-oidc.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/auth-revoke",
+      "markdown": "https://docs.doppler.com/reference/auth-revoke.md",
+      "file": "reference/auth-revoke.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/auth-token-formats",
+      "markdown": "https://docs.doppler.com/reference/auth-token-formats.md",
+      "file": "reference/auth-token-formats.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/change-request-policies-create",
+      "markdown": "https://docs.doppler.com/reference/change-request-policies-create.md",
+      "file": "reference/change-request-policies-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/change-request-policies-delete",
+      "markdown": "https://docs.doppler.com/reference/change-request-policies-delete.md",
+      "file": "reference/change-request-policies-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/change-request-policies-get",
+      "markdown": "https://docs.doppler.com/reference/change-request-policies-get.md",
+      "file": "reference/change-request-policies-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/change-request-policies-list",
+      "markdown": "https://docs.doppler.com/reference/change-request-policies-list.md",
+      "file": "reference/change-request-policies-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/change-request-policies-update",
+      "markdown": "https://docs.doppler.com/reference/change-request-policies-update.md",
+      "file": "reference/change-request-policies-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/close",
+      "markdown": "https://docs.doppler.com/reference/close.md",
+      "file": "reference/close.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/config_logs-get",
+      "markdown": "https://docs.doppler.com/reference/config_logs-get.md",
+      "file": "reference/config_logs-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/config_logs-list",
+      "markdown": "https://docs.doppler.com/reference/config_logs-list.md",
+      "file": "reference/config_logs-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/config_logs-object",
+      "markdown": "https://docs.doppler.com/reference/config_logs-object.md",
+      "file": "reference/config_logs-object.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/config_logs-rollback",
+      "markdown": "https://docs.doppler.com/reference/config_logs-rollback.md",
+      "file": "reference/config_logs-rollback.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-add_trusted_ip",
+      "markdown": "https://docs.doppler.com/reference/configs-add_trusted_ip.md",
+      "file": "reference/configs-add_trusted_ip.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-clone",
+      "markdown": "https://docs.doppler.com/reference/configs-clone.md",
+      "file": "reference/configs-clone.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-create",
+      "markdown": "https://docs.doppler.com/reference/configs-create.md",
+      "file": "reference/configs-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-delete",
+      "markdown": "https://docs.doppler.com/reference/configs-delete.md",
+      "file": "reference/configs-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-delete_trusted_ip",
+      "markdown": "https://docs.doppler.com/reference/configs-delete_trusted_ip.md",
+      "file": "reference/configs-delete_trusted_ip.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-get",
+      "markdown": "https://docs.doppler.com/reference/configs-get.md",
+      "file": "reference/configs-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-inheritable",
+      "markdown": "https://docs.doppler.com/reference/configs-inheritable.md",
+      "file": "reference/configs-inheritable.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-inherits",
+      "markdown": "https://docs.doppler.com/reference/configs-inherits.md",
+      "file": "reference/configs-inherits.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-list",
+      "markdown": "https://docs.doppler.com/reference/configs-list.md",
+      "file": "reference/configs-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-list_trusted_ips",
+      "markdown": "https://docs.doppler.com/reference/configs-list_trusted_ips.md",
+      "file": "reference/configs-list_trusted_ips.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-lock",
+      "markdown": "https://docs.doppler.com/reference/configs-lock.md",
+      "file": "reference/configs-lock.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-object",
+      "markdown": "https://docs.doppler.com/reference/configs-object.md",
+      "file": "reference/configs-object.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-unlock",
+      "markdown": "https://docs.doppler.com/reference/configs-unlock.md",
+      "file": "reference/configs-unlock.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/configs-update",
+      "markdown": "https://docs.doppler.com/reference/configs-update.md",
+      "file": "reference/configs-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/create",
+      "markdown": "https://docs.doppler.com/reference/create.md",
+      "file": "reference/create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/create-1",
+      "markdown": "https://docs.doppler.com/reference/create-1.md",
+      "file": "reference/create-1.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/delete",
+      "markdown": "https://docs.doppler.com/reference/delete.md",
+      "file": "reference/delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/delete-1",
+      "markdown": "https://docs.doppler.com/reference/delete-1.md",
+      "file": "reference/delete-1.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/dynamic_secrets-issue_lease",
+      "markdown": "https://docs.doppler.com/reference/dynamic_secrets-issue_lease.md",
+      "file": "reference/dynamic_secrets-issue_lease.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/dynamic_secrets-revoke_lease",
+      "markdown": "https://docs.doppler.com/reference/dynamic_secrets-revoke_lease.md",
+      "file": "reference/dynamic_secrets-revoke_lease.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/environments-create",
+      "markdown": "https://docs.doppler.com/reference/environments-create.md",
+      "file": "reference/environments-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/environments-delete",
+      "markdown": "https://docs.doppler.com/reference/environments-delete.md",
+      "file": "reference/environments-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/environments-get",
+      "markdown": "https://docs.doppler.com/reference/environments-get.md",
+      "file": "reference/environments-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/environments-list",
+      "markdown": "https://docs.doppler.com/reference/environments-list.md",
+      "file": "reference/environments-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/environments-object",
+      "markdown": "https://docs.doppler.com/reference/environments-object.md",
+      "file": "reference/environments-object.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/environments-rename",
+      "markdown": "https://docs.doppler.com/reference/environments-rename.md",
+      "file": "reference/environments-rename.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/get-options",
+      "markdown": "https://docs.doppler.com/reference/get-options.md",
+      "file": "reference/get-options.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/groups-add_member",
+      "markdown": "https://docs.doppler.com/reference/groups-add_member.md",
+      "file": "reference/groups-add_member.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/groups-create",
+      "markdown": "https://docs.doppler.com/reference/groups-create.md",
+      "file": "reference/groups-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/groups-delete",
+      "markdown": "https://docs.doppler.com/reference/groups-delete.md",
+      "file": "reference/groups-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/groups-delete_member",
+      "markdown": "https://docs.doppler.com/reference/groups-delete_member.md",
+      "file": "reference/groups-delete_member.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/groups-get",
+      "markdown": "https://docs.doppler.com/reference/groups-get.md",
+      "file": "reference/groups-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/groups-list",
+      "markdown": "https://docs.doppler.com/reference/groups-list.md",
+      "file": "reference/groups-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/groups-update",
+      "markdown": "https://docs.doppler.com/reference/groups-update.md",
+      "file": "reference/groups-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/integrations-create",
+      "markdown": "https://docs.doppler.com/reference/integrations-create.md",
+      "file": "reference/integrations-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/integrations-delete",
+      "markdown": "https://docs.doppler.com/reference/integrations-delete.md",
+      "file": "reference/integrations-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/integrations-get",
+      "markdown": "https://docs.doppler.com/reference/integrations-get.md",
+      "file": "reference/integrations-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/integrations-list",
+      "markdown": "https://docs.doppler.com/reference/integrations-list.md",
+      "file": "reference/integrations-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/integrations-update",
+      "markdown": "https://docs.doppler.com/reference/integrations-update.md",
+      "file": "reference/integrations-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/invites-list",
+      "markdown": "https://docs.doppler.com/reference/invites-list.md",
+      "file": "reference/invites-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/list",
+      "markdown": "https://docs.doppler.com/reference/list.md",
+      "file": "reference/list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/list-1",
+      "markdown": "https://docs.doppler.com/reference/list-1.md",
+      "file": "reference/list-1.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/list-2",
+      "markdown": "https://docs.doppler.com/reference/list-2.md",
+      "file": "reference/list-2.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-add",
+      "markdown": "https://docs.doppler.com/reference/project_members-add.md",
+      "file": "reference/project_members-add.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-delete",
+      "markdown": "https://docs.doppler.com/reference/project_members-delete.md",
+      "file": "reference/project_members-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-get",
+      "markdown": "https://docs.doppler.com/reference/project_members-get.md",
+      "file": "reference/project_members-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-list",
+      "markdown": "https://docs.doppler.com/reference/project_members-list.md",
+      "file": "reference/project_members-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-update",
+      "markdown": "https://docs.doppler.com/reference/project_members-update.md",
+      "file": "reference/project_members-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_roles-create",
+      "markdown": "https://docs.doppler.com/reference/project_roles-create.md",
+      "file": "reference/project_roles-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_roles-delete",
+      "markdown": "https://docs.doppler.com/reference/project_roles-delete.md",
+      "file": "reference/project_roles-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_roles-get",
+      "markdown": "https://docs.doppler.com/reference/project_roles-get.md",
+      "file": "reference/project_roles-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_roles-list",
+      "markdown": "https://docs.doppler.com/reference/project_roles-list.md",
+      "file": "reference/project_roles-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_roles-list_permissions",
+      "markdown": "https://docs.doppler.com/reference/project_roles-list_permissions.md",
+      "file": "reference/project_roles-list_permissions.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_roles-update",
+      "markdown": "https://docs.doppler.com/reference/project_roles-update.md",
+      "file": "reference/project_roles-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/projects-create",
+      "markdown": "https://docs.doppler.com/reference/projects-create.md",
+      "file": "reference/projects-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/projects-delete",
+      "markdown": "https://docs.doppler.com/reference/projects-delete.md",
+      "file": "reference/projects-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/projects-get",
+      "markdown": "https://docs.doppler.com/reference/projects-get.md",
+      "file": "reference/projects-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/projects-list",
+      "markdown": "https://docs.doppler.com/reference/projects-list.md",
+      "file": "reference/projects-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/projects-object",
+      "markdown": "https://docs.doppler.com/reference/projects-object.md",
+      "file": "reference/projects-object.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/projects-update",
+      "markdown": "https://docs.doppler.com/reference/projects-update.md",
+      "file": "reference/projects-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/rescind-review",
+      "markdown": "https://docs.doppler.com/reference/rescind-review.md",
+      "file": "reference/rescind-review.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/retrieve",
+      "markdown": "https://docs.doppler.com/reference/retrieve.md",
+      "file": "reference/retrieve.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/retrieve-1",
+      "markdown": "https://docs.doppler.com/reference/retrieve-1.md",
+      "file": "reference/retrieve-1.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/retrieve-2",
+      "markdown": "https://docs.doppler.com/reference/retrieve-2.md",
+      "file": "reference/retrieve-2.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/retrieve-member",
+      "markdown": "https://docs.doppler.com/reference/retrieve-member.md",
+      "file": "reference/retrieve-member.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/retrieve-unit",
+      "markdown": "https://docs.doppler.com/reference/retrieve-unit.md",
+      "file": "reference/retrieve-unit.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/review-unit",
+      "markdown": "https://docs.doppler.com/reference/review-unit.md",
+      "file": "reference/review-unit.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/secrets-delete",
+      "markdown": "https://docs.doppler.com/reference/secrets-delete.md",
+      "file": "reference/secrets-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/secrets-download",
+      "markdown": "https://docs.doppler.com/reference/secrets-download.md",
+      "file": "reference/secrets-download.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/secrets-get",
+      "markdown": "https://docs.doppler.com/reference/secrets-get.md",
+      "file": "reference/secrets-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/secrets-list",
+      "markdown": "https://docs.doppler.com/reference/secrets-list.md",
+      "file": "reference/secrets-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/secrets-names",
+      "markdown": "https://docs.doppler.com/reference/secrets-names.md",
+      "file": "reference/secrets-names.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/secrets-update",
+      "markdown": "https://docs.doppler.com/reference/secrets-update.md",
+      "file": "reference/secrets-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/secrets-update_note",
+      "markdown": "https://docs.doppler.com/reference/secrets-update_note.md",
+      "file": "reference/secrets-update_note.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_account_tokens-create",
+      "markdown": "https://docs.doppler.com/reference/service_account_tokens-create.md",
+      "file": "reference/service_account_tokens-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_account_tokens-delete",
+      "markdown": "https://docs.doppler.com/reference/service_account_tokens-delete.md",
+      "file": "reference/service_account_tokens-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_account_tokens-get",
+      "markdown": "https://docs.doppler.com/reference/service_account_tokens-get.md",
+      "file": "reference/service_account_tokens-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_account_tokens-list",
+      "markdown": "https://docs.doppler.com/reference/service_account_tokens-list.md",
+      "file": "reference/service_account_tokens-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_accounts-create",
+      "markdown": "https://docs.doppler.com/reference/service_accounts-create.md",
+      "file": "reference/service_accounts-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_accounts-delete",
+      "markdown": "https://docs.doppler.com/reference/service_accounts-delete.md",
+      "file": "reference/service_accounts-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_accounts-get",
+      "markdown": "https://docs.doppler.com/reference/service_accounts-get.md",
+      "file": "reference/service_accounts-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_accounts-list",
+      "markdown": "https://docs.doppler.com/reference/service_accounts-list.md",
+      "file": "reference/service_accounts-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_accounts-update",
+      "markdown": "https://docs.doppler.com/reference/service_accounts-update.md",
+      "file": "reference/service_accounts-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_tokens-create",
+      "markdown": "https://docs.doppler.com/reference/service_tokens-create.md",
+      "file": "reference/service_tokens-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_tokens-delete",
+      "markdown": "https://docs.doppler.com/reference/service_tokens-delete.md",
+      "file": "reference/service_tokens-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_tokens-list",
+      "markdown": "https://docs.doppler.com/reference/service_tokens-list.md",
+      "file": "reference/service_tokens-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/service_tokens-object",
+      "markdown": "https://docs.doppler.com/reference/service_tokens-object.md",
+      "file": "reference/service_tokens-object.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/share-secret",
+      "markdown": "https://docs.doppler.com/reference/share-secret.md",
+      "file": "reference/share-secret.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/share-secret-encrypted",
+      "markdown": "https://docs.doppler.com/reference/share-secret-encrypted.md",
+      "file": "reference/share-secret-encrypted.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/syncs-create",
+      "markdown": "https://docs.doppler.com/reference/syncs-create.md",
+      "file": "reference/syncs-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/syncs-delete",
+      "markdown": "https://docs.doppler.com/reference/syncs-delete.md",
+      "file": "reference/syncs-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/syncs-get",
+      "markdown": "https://docs.doppler.com/reference/syncs-get.md",
+      "file": "reference/syncs-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/update",
+      "markdown": "https://docs.doppler.com/reference/update.md",
+      "file": "reference/update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/update-1",
+      "markdown": "https://docs.doppler.com/reference/update-1.md",
+      "file": "reference/update-1.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/update-2",
+      "markdown": "https://docs.doppler.com/reference/update-2.md",
+      "file": "reference/update-2.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/update-assignees",
+      "markdown": "https://docs.doppler.com/reference/update-assignees.md",
+      "file": "reference/update-assignees.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/update-unit-status",
+      "markdown": "https://docs.doppler.com/reference/update-unit-status.md",
+      "file": "reference/update-unit-status.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/users-get",
+      "markdown": "https://docs.doppler.com/reference/users-get.md",
+      "file": "reference/users-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/users-list",
+      "markdown": "https://docs.doppler.com/reference/users-list.md",
+      "file": "reference/users-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/users-update",
+      "markdown": "https://docs.doppler.com/reference/users-update.md",
+      "file": "reference/users-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/webhooks-add",
+      "markdown": "https://docs.doppler.com/reference/webhooks-add.md",
+      "file": "reference/webhooks-add.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/webhooks-delete",
+      "markdown": "https://docs.doppler.com/reference/webhooks-delete.md",
+      "file": "reference/webhooks-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/webhooks-disable",
+      "markdown": "https://docs.doppler.com/reference/webhooks-disable.md",
+      "file": "reference/webhooks-disable.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/webhooks-enable",
+      "markdown": "https://docs.doppler.com/reference/webhooks-enable.md",
+      "file": "reference/webhooks-enable.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/webhooks-get",
+      "markdown": "https://docs.doppler.com/reference/webhooks-get.md",
+      "file": "reference/webhooks-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/webhooks-list",
+      "markdown": "https://docs.doppler.com/reference/webhooks-list.md",
+      "file": "reference/webhooks-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/webhooks-update",
+      "markdown": "https://docs.doppler.com/reference/webhooks-update.md",
+      "file": "reference/webhooks-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace_roles-create",
+      "markdown": "https://docs.doppler.com/reference/workplace_roles-create.md",
+      "file": "reference/workplace_roles-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace_roles-delete",
+      "markdown": "https://docs.doppler.com/reference/workplace_roles-delete.md",
+      "file": "reference/workplace_roles-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace_roles-get",
+      "markdown": "https://docs.doppler.com/reference/workplace_roles-get.md",
+      "file": "reference/workplace_roles-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace_roles-list",
+      "markdown": "https://docs.doppler.com/reference/workplace_roles-list.md",
+      "file": "reference/workplace_roles-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace_roles-list_permissions",
+      "markdown": "https://docs.doppler.com/reference/workplace_roles-list_permissions.md",
+      "file": "reference/workplace_roles-list_permissions.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace_roles-update",
+      "markdown": "https://docs.doppler.com/reference/workplace_roles-update.md",
+      "file": "reference/workplace_roles-update.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace-get",
+      "markdown": "https://docs.doppler.com/reference/workplace-get.md",
+      "file": "reference/workplace-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace-object",
+      "markdown": "https://docs.doppler.com/reference/workplace-object.md",
+      "file": "reference/workplace-object.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/workplace-update",
+      "markdown": "https://docs.doppler.com/reference/workplace-update.md",
+      "file": "reference/workplace-update.md"
+    }
+  ]
+}

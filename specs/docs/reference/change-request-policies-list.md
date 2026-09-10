@@ -1,0 +1,137 @@
+---
+updatedAt: 2025-05-29T17:02:05.000Z
+---
+
+Fetch the complete documentation index at: https://docs.doppler.com/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# List
+
+List existing change request policies
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "core",
+    "version": "4"
+  },
+  "servers": [
+    {
+      "url": "https://api.doppler.com/"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "oauth2",
+        "flows": {}
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "paths": {
+    "/v3/workplace/change_request_policies": {
+      "get": {
+        "summary": "List",
+        "description": "List existing change request policies",
+        "operationId": "change-request-policies-list",
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"policies\": [\n        {\n            \"policy\": {\n                \"id\": \"00000000-0000-0000-0000-000000000000\",\n                \"name\": \"Reviewer Policy\",\n                \"description\": \"A description of the policy.\",\n                \"rules\": [\n//                 {\n//                     \"type\": \"RequiredReviewer\",\n//                     \"count\": 1,\n//                     \"subjects\": [\n//                         {\n//                             \"type\": \"WorkplaceUser\",\n//                             \"slug\": \"00000000-0000-0000-0000-000000000000\",\n//                             \"name\": \"John Developer\",\n//                             \"description\": \"john.dev@doppler.com\",\n//                             \"isActive\": true,\n//                             \"image\": \"https://www.gravatar.com/avatar/0000\"\n//                         }\n//                     ]\n//                 }\n                ],\n                \"targets\": {\n                    \"allProjects\": false,\n                    \"projects\": {\n//                      \"example-project-a\": {\n//                          \"all\": true\n//                      },\n//                      \"example-project-b\": {\n//                          \"all\": false,\n//                          \"envSlugs\": [\"dev\"],\n//                          \"configNames\": []\n//                      },\n//                      \"example-project-c\": {\n//                          \"all\": false,\n//                          \"envSlugs\": [],\n//                         \"configNames\": [\"prd_infra\"]\n//                      }\n                    }\n                }\n            }\n        }\n    ],\n    \"success\": true\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "policies": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "policy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "example": "00000000-0000-0000-0000-000000000000"
+                              },
+                              "name": {
+                                "type": "string",
+                                "example": "Reviewer Policy"
+                              },
+                              "description": {
+                                "type": "string",
+                                "example": "A description of the policy."
+                              },
+                              "rules": {
+                                "type": "array"
+                              },
+                              "targets": {
+                                "type": "object",
+                                "properties": {
+                                  "allProjects": {
+                                    "type": "boolean",
+                                    "example": false,
+                                    "default": true
+                                  },
+                                  "projects": {
+                                    "type": "object",
+                                    "properties": {}
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": true,
+                      "default": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "x-readme": {
+    "headers": [],
+    "explorer-enabled": true,
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}
+```
