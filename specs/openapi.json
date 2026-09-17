@@ -1797,6 +1797,33 @@
                         "note": {
                           "type": "string",
                           "example": ""
+                        },
+                        "rawVisibility": {
+                          "type": "string",
+                          "enum": [
+                            "unmasked",
+                            "masked",
+                            "restricted"
+                          ]
+                        },
+                        "computedVisibility": {
+                          "type": "string"
+                        },
+                        "rawValueType": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "computedValueType": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
                     }
@@ -1805,8 +1832,7 @@
               }
             }
           }
-        },
-        "deprecated": false
+        }
       },
       "delete": {
         "summary": "Delete",
@@ -1939,7 +1965,54 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"secrets\": {\n    \"STRIPE\": {\n      \"raw\": \"sk_test_9YxLnoLDdvOPn2dfjBVPB\",\n      \"computed\": \"sk_test_9YxLnoLDdvOPn2dfjBVPB\",\n      \"note\": \"\",\n      \"rawVisibility\": \"masked\",\n      \"computedVisibility\": \"masked\"\n    },\n    \"ALGOLIA\": {\n      \"raw\": \"N9TOPUCTO\",\n      \"computed\": \"N9TOPUCTO\",\n      \"note\": \"\",\n      \"rawVisibility\": \"masked\",\n      \"computedVisibility\": \"masked\"\n    },\n    \"DATABASE\": {\n    \t\"raw\": \"${USER}@aws.dynamodb.com:9876\",\n      \"computed\": \"brian@aws.dynamodb.com:9876\",\n      \"note\": \"\",\n      \"rawVisibility\": \"restricted\",\n      \"computedVisibility\": \"restricted\"\n    },\n    \"USER\": {\n    \t\"raw\": \"brian\",\n      \"computed\": \"brian\",\n      \"note\": \"\",\n      \"rawVisibility\": \"unmasked\",\n      \"computedVisibility\": \"unmasked\"\n    }\n  }\n}"
+                    "value": {
+                      "secrets": {
+                        "STRIPE": {
+                          "raw": "sk_test_9YxLnoLDdvOPn2dfjBVPB",
+                          "computed": "sk_test_9YxLnoLDdvOPn2dfjBVPB",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "masked"
+                          },
+                          "computedVisibility": {
+                            "type": "masked"
+                          }
+                        },
+                        "ALGOLIA": {
+                          "raw": "N9TOPUCTO",
+                          "computed": "N9TOPUCTO",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "masked"
+                          },
+                          "computedVisibility": {
+                            "type": "masked"
+                          }
+                        },
+                        "DATABASE": {
+                          "raw": "${USER}@aws.dynamodb.com:9876",
+                          "computed": "brian@aws.dynamodb.com:9876",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "restricted"
+                          },
+                          "computedVisibility": {
+                            "type": "restricted"
+                          }
+                        },
+                        "USER": {
+                          "raw": "brian",
+                          "computed": "brian",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "unmasked"
+                          },
+                          "computedVisibility": {
+                            "type": "unmasked"
+                          }
+                        }
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -1964,12 +2037,22 @@
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         },
@@ -1989,12 +2072,22 @@
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         },
@@ -2014,12 +2107,22 @@
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "restricted"
+                              "type": "object",
+                              "example": "restricted",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "restricted"
+                              "type": "object",
+                              "example": "restricted",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         },
@@ -2039,12 +2142,22 @@
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "unmasked"
+                              "type": "object",
+                              "example": "unmasked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "unmasked"
+                              "type": "object",
+                              "example": "unmasked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         }
@@ -2055,8 +2168,7 @@
               }
             }
           }
-        },
-        "deprecated": false
+        }
       },
       "post": {
         "summary": "Update",
@@ -6042,7 +6154,64 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "webhooks": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "Webhook's slug"
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "Webhook's name"
+                          },
+                          "url": {
+                            "type": "string",
+                            "description": "Webhook's URL"
+                          },
+                          "enabled": {
+                            "type": "boolean",
+                            "description": "Whether the webhook is enabled or disabled"
+                          },
+                          "hasSecret": {
+                            "type": "boolean",
+                            "description": "Whether the webhook has a secret set. See: https://docs.doppler.com/docs/webhooks#verify-webhook-with-request-signing"
+                          },
+                          "authentication": {
+                            "type": "object",
+                            "description": "Webhook's authentication type",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "None",
+                                  "Basic",
+                                  "Bearer"
+                                ]
+                              }
+                            }
+                          },
+                          "enabledConfigs": {
+                            "type": "array",
+                            "description": "The configs the webhook will trigger for",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "canManage": {
+                            "type": "boolean",
+                            "description": "Whether the requestor has permission to modify the webhook"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    }
+                  },
+                  "required": [
+                    "webhooks"
+                  ]
                 }
               }
             }
@@ -6216,7 +6385,61 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "webhook": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "description": "Webhook's slug"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "Webhook's name"
+                        },
+                        "url": {
+                          "type": "string",
+                          "description": "Webhook's URL"
+                        },
+                        "enabled": {
+                          "type": "boolean",
+                          "description": "Whether the webhook is enabled or disabled"
+                        },
+                        "hasSecret": {
+                          "type": "boolean",
+                          "description": "Whether the webhook has a secret set. See: https://docs.doppler.com/docs/webhooks#verify-webhook-with-request-signing"
+                        },
+                        "authentication": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "None",
+                                "Basic",
+                                "Bearer"
+                              ]
+                            }
+                          },
+                          "description": "Webhook's authentication type"
+                        },
+                        "enabledConfigs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "The configs the webhook will trigger for"
+                        },
+                        "canManage": {
+                          "type": "boolean",
+                          "description": "Whether the requestor has permission to modify the webhook"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "webhook"
+                  ]
                 }
               }
             }
@@ -6237,8 +6460,7 @@
               }
             }
           }
-        },
-        "deprecated": false
+        }
       },
       "delete": {
         "summary": "Delete",

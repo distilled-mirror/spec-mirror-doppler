@@ -1,5 +1,5 @@
 ---
-updatedAt: 2025-05-29T17:01:36.000Z
+updatedAt: 2026-09-16T15:30:58.000Z
 ---
 
 Fetch the complete documentation index at: https://docs.doppler.com/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
@@ -114,7 +114,54 @@ Secrets
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"secrets\": {\n    \"STRIPE\": {\n      \"raw\": \"sk_test_9YxLnoLDdvOPn2dfjBVPB\",\n      \"computed\": \"sk_test_9YxLnoLDdvOPn2dfjBVPB\",\n      \"note\": \"\",\n      \"rawVisibility\": \"masked\",\n      \"computedVisibility\": \"masked\"\n    },\n    \"ALGOLIA\": {\n      \"raw\": \"N9TOPUCTO\",\n      \"computed\": \"N9TOPUCTO\",\n      \"note\": \"\",\n      \"rawVisibility\": \"masked\",\n      \"computedVisibility\": \"masked\"\n    },\n    \"DATABASE\": {\n    \t\"raw\": \"${USER}@aws.dynamodb.com:9876\",\n      \"computed\": \"brian@aws.dynamodb.com:9876\",\n      \"note\": \"\",\n      \"rawVisibility\": \"restricted\",\n      \"computedVisibility\": \"restricted\"\n    },\n    \"USER\": {\n    \t\"raw\": \"brian\",\n      \"computed\": \"brian\",\n      \"note\": \"\",\n      \"rawVisibility\": \"unmasked\",\n      \"computedVisibility\": \"unmasked\"\n    }\n  }\n}"
+                    "value": {
+                      "secrets": {
+                        "STRIPE": {
+                          "raw": "sk_test_9YxLnoLDdvOPn2dfjBVPB",
+                          "computed": "sk_test_9YxLnoLDdvOPn2dfjBVPB",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "masked"
+                          },
+                          "computedVisibility": {
+                            "type": "masked"
+                          }
+                        },
+                        "ALGOLIA": {
+                          "raw": "N9TOPUCTO",
+                          "computed": "N9TOPUCTO",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "masked"
+                          },
+                          "computedVisibility": {
+                            "type": "masked"
+                          }
+                        },
+                        "DATABASE": {
+                          "raw": "${USER}@aws.dynamodb.com:9876",
+                          "computed": "brian@aws.dynamodb.com:9876",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "restricted"
+                          },
+                          "computedVisibility": {
+                            "type": "restricted"
+                          }
+                        },
+                        "USER": {
+                          "raw": "brian",
+                          "computed": "brian",
+                          "note": "",
+                          "rawVisibility": {
+                            "type": "unmasked"
+                          },
+                          "computedVisibility": {
+                            "type": "unmasked"
+                          }
+                        }
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -139,12 +186,22 @@ Secrets
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         },
@@ -164,12 +221,22 @@ Secrets
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "masked"
+                              "type": "object",
+                              "example": "masked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         },
@@ -189,12 +256,22 @@ Secrets
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "restricted"
+                              "type": "object",
+                              "example": "restricted",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "restricted"
+                              "type": "object",
+                              "example": "restricted",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         },
@@ -214,12 +291,22 @@ Secrets
                               "example": ""
                             },
                             "rawVisibility": {
-                              "type": "string",
-                              "example": "unmasked"
+                              "type": "object",
+                              "example": "unmasked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             },
                             "computedVisibility": {
-                              "type": "string",
-                              "example": "unmasked"
+                              "type": "object",
+                              "example": "unmasked",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         }
@@ -230,8 +317,7 @@ Secrets
               }
             }
           }
-        },
-        "deprecated": false
+        }
       }
     }
   },

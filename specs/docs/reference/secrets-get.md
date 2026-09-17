@@ -1,5 +1,5 @@
 ---
-updatedAt: 2025-05-29T17:01:36.000Z
+updatedAt: 2026-09-16T15:28:19.000Z
 ---
 
 Fetch the complete documentation index at: https://docs.doppler.com/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
@@ -104,6 +104,33 @@ Secret
                         "note": {
                           "type": "string",
                           "example": ""
+                        },
+                        "rawVisibility": {
+                          "type": "string",
+                          "enum": [
+                            "unmasked",
+                            "masked",
+                            "restricted"
+                          ]
+                        },
+                        "computedVisibility": {
+                          "type": "string"
+                        },
+                        "rawValueType": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "computedValueType": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
                     }
@@ -112,8 +139,7 @@ Secret
               }
             }
           }
-        },
-        "deprecated": false
+        }
       }
     }
   },

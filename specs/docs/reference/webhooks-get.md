@@ -1,5 +1,5 @@
 ---
-updatedAt: 2025-05-29T17:02:02.000Z
+updatedAt: 2026-09-16T15:03:42.000Z
 ---
 
 Fetch the complete documentation index at: https://docs.doppler.com/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
@@ -72,7 +72,61 @@ Webhook
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "webhook": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "description": "Webhook's slug"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "Webhook's name"
+                        },
+                        "url": {
+                          "type": "string",
+                          "description": "Webhook's URL"
+                        },
+                        "enabled": {
+                          "type": "boolean",
+                          "description": "Whether the webhook is enabled or disabled"
+                        },
+                        "hasSecret": {
+                          "type": "boolean",
+                          "description": "Whether the webhook has a secret set. See: https://docs.doppler.com/docs/webhooks#verify-webhook-with-request-signing"
+                        },
+                        "authentication": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "None",
+                                "Basic",
+                                "Bearer"
+                              ]
+                            }
+                          },
+                          "description": "Webhook's authentication type"
+                        },
+                        "enabledConfigs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "The configs the webhook will trigger for"
+                        },
+                        "canManage": {
+                          "type": "boolean",
+                          "description": "Whether the requestor has permission to modify the webhook"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "webhook"
+                  ]
                 }
               }
             }
@@ -93,8 +147,7 @@ Webhook
               }
             }
           }
-        },
-        "deprecated": false
+        }
       }
     }
   },
