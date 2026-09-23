@@ -4,7 +4,7 @@
 
 Append .md to any documentation page URL to get its markdown version.
 
-## Guides
+## Documentation
 - [Welcome 👋](https://docs.doppler.com/docs/start.md)
 - [Getting Started](https://docs.doppler.com/docs/getting-started.md): Learn how to get started with Doppler for keeping your secrets and application config in sync across machines, hosting providers, CI/CD tools, and secrets managers.
 - [Team Management](https://docs.doppler.com/docs/secretops-beginners-series-team-management.md): Understand Doppler’s user-access permissions model, learn how to set up notifications for Workplace and Project activity, and configure Single Sign-On.
@@ -356,6 +356,8 @@ Append .md to any documentation page URL to get its markdown version.
 - [Workplace User](https://docs.doppler.com/reference/audit-get_user.md): Get a specific user in a workplace
 
 ## Changelog
+- [August 2026](https://docs.doppler.com/changelog/august-2026.md)
+- [July 2026](https://docs.doppler.com/changelog/july-2026.md)
 - [June 2026](https://docs.doppler.com/changelog/june-2026.md)
 - [May 2026](https://docs.doppler.com/changelog/may-2026.md)
 - [April 2026](https://docs.doppler.com/changelog/april-2026.md)
@@ -364,5 +366,3 @@ Append .md to any documentation page URL to get its markdown version.
 - [January 2026](https://docs.doppler.com/changelog/january-2026.md)
 - [December 2025](https://docs.doppler.com/changelog/december-2025.md)
 - [November 2025](https://docs.doppler.com/changelog/november-2025.md)
-- [October 2025](https://docs.doppler.com/changelog/october-2025.md)
-- [September 2025](https://docs.doppler.com/changelog/september-2025.md)
