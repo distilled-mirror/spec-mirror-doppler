@@ -10,7 +10,7 @@ Append .md to any documentation page URL to get its markdown version.
 - [Team Management](https://docs.doppler.com/docs/secretops-beginners-series-team-management.md): Understand Doppler’s user-access permissions model, learn how to set up notifications for Workplace and Project activity, and configure Single Sign-On.
 - [CI/CD & Production](https://docs.doppler.com/docs/secretops-beginners-series-cicd-production.md): Understand Doppler’s secrets orchestration model, learn how to administer integration connections, and establish connection syncs for CI/CD, Staging, and Production.
 - [Managing Secrets](https://docs.doppler.com/docs/secretops-beginners-series-managing-secrets.md): Learn how to take your secrets management skills to the next level using features such as secrets visibility, branch configs, and secrets referencing.
-- [Secrets Rotation](https://docs.doppler.com/docs/secretops-beginners-series-secrets-rotation.md): Understand Doppler's proxied and API secrets rotation models, learn how to eliminate the risk of downtime with the two secret strategy, and set up secrets rotation for database credentials, IAM users, and API keys.
+- [Secrets Rotation](https://docs.doppler.com/docs/secretops-beginners-series-secrets-rotation.md): Understand Doppler's proxied and API secrets rotation models, learn how to eliminate the risk of downtime with the two secret strategy, and set up secrets rotation for database credentials, IAM…
 - [Install CLI](https://docs.doppler.com/docs/install-cli.md): Install the Doppler CLI in local development and production environments.
 - [CLI Guide](https://docs.doppler.com/docs/cli.md): Learn how to get up and running with the Doppler CLI to inject secrets into your applications.
 - [Automatic Restart](https://docs.doppler.com/docs/automatic-restart.md)
@@ -348,7 +348,7 @@ Append .md to any documentation page URL to get its markdown version.
 - [Revoke](https://docs.doppler.com/reference/auth-revoke.md): Revoke an auth token
 - [OIDC (Service Account Identity)](https://docs.doppler.com/reference/auth-oidc.md): Authenticate via a Service Account Identity with OIDC. Returns a short lived API token.
 - [Me](https://docs.doppler.com/reference/auth-me.md): Get information about a token
-- [Plain Text](https://docs.doppler.com/reference/share-secret.md): Generate a Doppler Share link by sending a plain text secret. This endpoint is not end-to-end encrypted as you are sending the secret in plain text. At no point do we store the plain text secret or the password in our systems. The receive flow the user goes through will be end-to-end encrypted where the encrypted secret will be decrypted on the browser.
+- [Plain Text](https://docs.doppler.com/reference/share-secret.md): Generate a Doppler Share link by sending a plain text secret. This endpoint is not end-to-end encrypted as you are sending the secret in plain text. At no point do we store the plain text secret or…
 - [E2E Encrypted](https://docs.doppler.com/reference/share-secret-encrypted.md): Generate a Doppler Share link by sending an encrypted secret. The receive flow the user goes through will be end-to-end encrypted where the encrypted secret will be decrypted on the browser.
 - [Audit API Reference](https://docs.doppler.com/reference/audit-api_reference.md)
 - [Workplace](https://docs.doppler.com/reference/audit-get_workplace.md): Get information about the workplace
