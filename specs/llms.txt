@@ -136,6 +136,7 @@ Append .md to any documentation page URL to get its markdown version.
 - [AWS IAM](https://docs.doppler.com/docs/aws-iam.md)
 - [Azure Service Principal](https://docs.doppler.com/docs/azure-dynamic-service-principal.md)
 - [Workplace Structure](https://docs.doppler.com/docs/workplace-structure.md): Learn how to structure your projects and configs most effectively inside a workplace.
+- [Workplace Settings](https://docs.doppler.com/docs/workplace-settings.md): Manage your workplace's details, domains, log forwarding, project features, encryption, email notifications, and more.
 - [Default Project Environments](https://docs.doppler.com/docs/default-environments.md): Learn how to define a default environment structure every new project will use.
 - [Domain Verification](https://docs.doppler.com/docs/domain-verification.md): Verify your workplace domain to restrict account Single Sign-On to that domain.
 - [Activity Logs](https://docs.doppler.com/docs/workplace-logs.md)
