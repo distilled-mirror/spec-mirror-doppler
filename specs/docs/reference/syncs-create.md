@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-08-06T22:20:21.000Z
+updatedAt: 2026-09-25T16:29:17.000Z
 ---
 
 Fetch the complete documentation index at: https://docs.doppler.com/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
@@ -100,6 +100,16 @@ Below are the `data` fields for each integration type:
 | variable\_set\_id    | string (variable set only) | The Terraform Cloud variable set ID to sync to                                                      |
 | variable\_sync\_type | string                     | Either "terraform" to sync secrets as Terraform variables or "env" to sync as environment variables |
 | name\_transform      | string                     | A name transform to apply before syncing secrets: "none" or "lowercase"                             |
+
+## Vercel
+
+| Field           | Type              | Description                                                                                                                                                                                                        |
+| :-------------- | :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| team\_id        | string            | The Vercel team ID to sync to, or "personal" for a personal account                                                                                                                                                |
+| project\_id     | string            | The Vercel project ID to sync to                                                                                                                                                                                   |
+| target\_id      | string            | The Vercel environment to sync to: "production", "preview", "development", or a custom environment ID                                                                                                              |
+| preview\_branch | string (optional) | The git branch to scope the variables to (only used when `target_id` is set to "preview")                                                                                                                          |
+| variable\_type  | string            | Either "config", "secret", or "dynamic". Dynamic syncs unmasked secrets as Config variables and masked or restricted secrets as Secret variables. The legacy values "encrypted" and "sensitive" are also accepted. |
 
 # OpenAPI definition
 
