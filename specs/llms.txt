@@ -152,6 +152,7 @@
   - [Slack](https://docs.doppler.com/docs/slack.md): Learn how to send workplace Activity Logs to a Slack channel.
   - [Splunk](https://docs.doppler.com/docs/splunk.md)
   - [Sumo Logic](https://docs.doppler.com/docs/sumologic.md)
+  - [Activity Log Event Schema](https://docs.doppler.com/docs/activity-log-event-schema.md): Learn about the schema used in Doppler Activity Log events
 - [Access Logs](https://docs.doppler.com/docs/access-logs.md)
 - [Enterprise Key Management](https://docs.doppler.com/docs/enterprise-key-management.md): Use a customer-controlled encryption key to enable tokenization in your cloud secrets manager.
   - [AWS EKM](https://docs.doppler.com/docs/ekm-aws.md): EKM configuration guide for AWS KMS
