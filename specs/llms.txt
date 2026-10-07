@@ -140,7 +140,7 @@
 
 ## Documentation: Workplace
 - [Workplace Structure](https://docs.doppler.com/docs/workplace-structure.md): Learn how to structure your projects and configs most effectively inside a workplace.
-- [Workplace Settings](https://docs.doppler.com/docs/workplace-settings.md): Manage your workplace's details, domains, log forwarding, project features, encryption, email notifications, and more.
+- [Workplace Settings](https://docs.doppler.com/docs/workplace-settings.md): Manage your workplace's details, domains, log forwarding, project features, project tags, encryption, email notifications, and more.
 - [Default Project Environments](https://docs.doppler.com/docs/default-environments.md): Learn how to define a default environment structure every new project will use.
 - [Domain Verification](https://docs.doppler.com/docs/domain-verification.md): Verify your workplace domain to restrict account Single Sign-On to that domain.
 - [Activity Logs](https://docs.doppler.com/docs/workplace-logs.md)
@@ -195,6 +195,7 @@
 ## Documentation: Projects
 - [Create Project](https://docs.doppler.com/docs/create-project.md): Create projects for scoping secrets to different applications.
 - [Project Permissions](https://docs.doppler.com/docs/project-permissions.md): Get up to speed with Doppler's project permissions model.
+- [Project Tags](https://docs.doppler.com/docs/tags.md): Label projects with color-coded tags to organize and filter your projects list.
 - [Webhooks](https://docs.doppler.com/docs/webhooks.md): Learn how to use webhooks to integrate Doppler into your continuous delivery workflows.
 - [Project Templates](https://docs.doppler.com/docs/project-templates.md): Automate the creation and configuration of Doppler Projects.
 - [Change Requests](https://docs.doppler.com/docs/change-requests.md): Learn how to use change requests to manage secret changes across your environments
@@ -281,6 +282,18 @@
 - [Add](https://docs.doppler.com/reference/project_members-add.md)
 - [Update](https://docs.doppler.com/reference/project_members-update.md)
 - [Delete](https://docs.doppler.com/reference/project_members-delete.md)
+
+## API Reference: Project Tags
+- [List](https://docs.doppler.com/reference/project_tags-list.md): List the tags assigned to a project, sorted by name. Anyone who can view the project can list its tags.
+- [Assign](https://docs.doppler.com/reference/project_tags-assign.md): Assign an existing tag to a project. Requires the `enclave_project_tags_manage` project permission. A project can have up to 100 tags.
+- [Unassign](https://docs.doppler.com/reference/project_tags-unassign.md): Remove a tag from a project. The tag itself isn't deleted. Requires the `enclave_project_tags_manage` project permission.
+
+## API Reference: Tags
+- [List](https://docs.doppler.com/reference/tags-list.md): List the tags in your workplace, sorted by name. Any member of the workplace can list tags.
+- [Retrieve](https://docs.doppler.com/reference/tags-get.md): Retrieve a tag. Any member of the workplace can retrieve tags.
+- [Create](https://docs.doppler.com/reference/tags-create.md): Create a tag. Requires the `tags_create` workplace permission. A workplace can have up to 100 tags.
+- [Update](https://docs.doppler.com/reference/tags-update.md): Rename a tag or change its color. You must specify at least one of `name` or `color`. A tag's slug can't be changed. Requires the `tags_update` workplace permission.
+- [Delete](https://docs.doppler.com/reference/tags-delete.md): Delete a tag. A tag can't be deleted while it's assigned to any project, so remove it from every project first. Requires the `tags_delete` workplace permission.
 
 ## API Reference: Environments
 - [Object](https://docs.doppler.com/reference/environments-object.md): Environment

@@ -1,6 +1,6 @@
 {
   "source": "https://docs.doppler.com/llms.txt",
-  "count": 140,
+  "count": 148,
   "pages": [
     {
       "page": "https://docs.doppler.com/reference/activity_logs-list",
@@ -393,6 +393,21 @@
       "file": "reference/project_roles-update.md"
     },
     {
+      "page": "https://docs.doppler.com/reference/project_tags-assign",
+      "markdown": "https://docs.doppler.com/reference/project_tags-assign.md",
+      "file": "reference/project_tags-assign.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_tags-list",
+      "markdown": "https://docs.doppler.com/reference/project_tags-list.md",
+      "file": "reference/project_tags-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_tags-unassign",
+      "markdown": "https://docs.doppler.com/reference/project_tags-unassign.md",
+      "file": "reference/project_tags-unassign.md"
+    },
+    {
       "page": "https://docs.doppler.com/reference/projects-create",
       "markdown": "https://docs.doppler.com/reference/projects-create.md",
       "file": "reference/projects-create.md"
@@ -581,6 +596,31 @@
       "page": "https://docs.doppler.com/reference/syncs-get",
       "markdown": "https://docs.doppler.com/reference/syncs-get.md",
       "file": "reference/syncs-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/tags-create",
+      "markdown": "https://docs.doppler.com/reference/tags-create.md",
+      "file": "reference/tags-create.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/tags-delete",
+      "markdown": "https://docs.doppler.com/reference/tags-delete.md",
+      "file": "reference/tags-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/tags-get",
+      "markdown": "https://docs.doppler.com/reference/tags-get.md",
+      "file": "reference/tags-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/tags-list",
+      "markdown": "https://docs.doppler.com/reference/tags-list.md",
+      "file": "reference/tags-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/tags-update",
+      "markdown": "https://docs.doppler.com/reference/tags-update.md",
+      "file": "reference/tags-update.md"
     },
     {
       "page": "https://docs.doppler.com/reference/update",

@@ -61,6 +61,14 @@ Projects
               "format": "int32",
               "default": 20
             }
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Comma-separated list of tag slugs, such as `backend,pci`. Only projects that have every listed tag are returned. A slug that doesn't match any tag returns no projects.",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {

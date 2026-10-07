@@ -4886,6 +4886,14 @@
               "format": "int32",
               "default": 20
             }
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Comma-separated list of tag slugs, such as `backend,pci`. Only projects that have every listed tag are returned. A slug that doesn't match any tag returns no projects.",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -5757,6 +5765,344 @@
           }
         },
         "deprecated": false
+      }
+    },
+    "/v3/projects/project/tags": {
+      "get": {
+        "summary": "List",
+        "operationId": "project_tags-list",
+        "deprecated": false,
+        "description": "List the tags assigned to a project, sorted by name. Anyone who can view the project can list its tags.",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "required": true,
+            "description": "The project's slug.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The project's tags.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"tags\": [\n    {\n      \"slug\": \"backend\",\n      \"name\": \"Backend\",\n      \"color\": \"blue\",\n      \"created_at\": \"2026-10-05T19:04:21.930Z\"\n    },\n    {\n      \"slug\": \"pci\",\n      \"name\": \"PCI\",\n      \"color\": \"red\",\n      \"created_at\": \"2026-10-05T19:04:22.118Z\"\n    }\n  ]\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "slug": {
+                            "type": "string",
+                            "description": "The tag's unique identifier. Use it to refer to the tag in other API calls. Can't be changed.",
+                            "example": "pci"
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "The tag's display name.",
+                            "example": "PCI"
+                          },
+                          "color": {
+                            "type": "string",
+                            "enum": [
+                              "gray",
+                              "purple",
+                              "blue",
+                              "green",
+                              "yellow",
+                              "orange",
+                              "red",
+                              "pink"
+                            ],
+                            "description": "The tag's color.",
+                            "example": "red"
+                          },
+                          "created_at": {
+                            "type": "string",
+                            "description": "Date and time the tag was created.",
+                            "example": "2026-10-05T19:04:22.118Z"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Assign",
+        "operationId": "project_tags-assign",
+        "deprecated": false,
+        "description": "Assign an existing tag to a project. Requires the `enclave_project_tags_manage` project permission. A project can have up to 100 tags.",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "required": true,
+            "description": "The project's slug.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "tag"
+                ],
+                "properties": {
+                  "tag": {
+                    "type": "string",
+                    "description": "The slug of the tag to assign."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The assigned tag.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"tag\": {\n    \"slug\": \"pci\",\n    \"name\": \"PCI\",\n    \"color\": \"red\",\n    \"created_at\": \"2026-10-05T19:04:22.118Z\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tag": {
+                      "type": "object",
+                      "properties": {
+                        "slug": {
+                          "type": "string",
+                          "description": "The tag's unique identifier. Use it to refer to the tag in other API calls. Can't be changed.",
+                          "example": "pci"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "The tag's display name.",
+                          "example": "PCI"
+                        },
+                        "color": {
+                          "type": "string",
+                          "enum": [
+                            "gray",
+                            "purple",
+                            "blue",
+                            "green",
+                            "yellow",
+                            "orange",
+                            "red",
+                            "pink"
+                          ],
+                          "description": "The tag's color.",
+                          "example": "red"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Date and time the tag was created.",
+                          "example": "2026-10-05T19:04:22.118Z"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The project has reached its tag limit.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"Your project has reached its limit of 100 tags.\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "Your project has reached its limit of 100 tags."
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The tag doesn't exist.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"Tag does not exist\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "Tag does not exist"
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The tag is already assigned to the project.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"This tag is already assigned to this project.\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "This tag is already assigned to this project."
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/projects/project/tags/tag/{tag}": {
+      "delete": {
+        "summary": "Unassign",
+        "operationId": "project_tags-unassign",
+        "deprecated": false,
+        "description": "Remove a tag from a project. The tag itself isn't deleted. Requires the `enclave_project_tags_manage` project permission.",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "required": true,
+            "description": "The project's slug.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "description": "The tag's slug.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The tag was removed from the project. The response has no body."
+          },
+          "400": {
+            "description": "The tag isn't assigned to the project.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"This tag is not assigned to this project.\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "This tag is not assigned to this project."
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The tag doesn't exist.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"Tag does not exist\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "Tag does not exist"
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/v3/projects/roles": {
@@ -11503,6 +11849,532 @@
           }
         },
         "deprecated": false
+      }
+    },
+    "/v3/workplace/tags": {
+      "get": {
+        "summary": "List",
+        "operationId": "tags-list",
+        "deprecated": false,
+        "description": "List the tags in your workplace, sorted by name. Any member of the workplace can list tags.",
+        "responses": {
+          "200": {
+            "description": "The workplace's tags.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"tags\": [\n    {\n      \"slug\": \"backend\",\n      \"name\": \"Backend\",\n      \"color\": \"blue\",\n      \"created_at\": \"2026-10-05T19:04:21.930Z\"\n    },\n    {\n      \"slug\": \"pci\",\n      \"name\": \"PCI\",\n      \"color\": \"red\",\n      \"created_at\": \"2026-10-05T19:04:22.118Z\"\n    }\n  ]\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "slug": {
+                            "type": "string",
+                            "description": "The tag's unique identifier. Use it to refer to the tag in other API calls. Can't be changed.",
+                            "example": "pci"
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "The tag's display name.",
+                            "example": "PCI"
+                          },
+                          "color": {
+                            "type": "string",
+                            "enum": [
+                              "gray",
+                              "purple",
+                              "blue",
+                              "green",
+                              "yellow",
+                              "orange",
+                              "red",
+                              "pink"
+                            ],
+                            "description": "The tag's color.",
+                            "example": "red"
+                          },
+                          "created_at": {
+                            "type": "string",
+                            "description": "Date and time the tag was created.",
+                            "example": "2026-10-05T19:04:22.118Z"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create",
+        "operationId": "tags-create",
+        "deprecated": false,
+        "description": "Create a tag. Requires the `tags_create` workplace permission. A workplace can have up to 100 tags.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The tag's name. Between 1 and 32 characters. Must be unique in the workplace, regardless of capitalization."
+                  },
+                  "color": {
+                    "type": "string",
+                    "enum": [
+                      "gray",
+                      "purple",
+                      "blue",
+                      "green",
+                      "yellow",
+                      "orange",
+                      "red",
+                      "pink"
+                    ],
+                    "description": "The tag's color.",
+                    "default": "gray"
+                  },
+                  "slug": {
+                    "type": "string",
+                    "description": "The tag's slug. Lowercase letters, numbers, and underscores, up to 32 characters. Must be unique in the workplace. Defaults to the name in lowercase, with each run of other characters replaced by `_`. Can't be changed later."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The created tag.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"tag\": {\n    \"slug\": \"pci\",\n    \"name\": \"PCI\",\n    \"color\": \"red\",\n    \"created_at\": \"2026-10-05T19:04:22.118Z\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tag": {
+                      "type": "object",
+                      "properties": {
+                        "slug": {
+                          "type": "string",
+                          "description": "The tag's unique identifier. Use it to refer to the tag in other API calls. Can't be changed.",
+                          "example": "pci"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "The tag's display name.",
+                          "example": "PCI"
+                        },
+                        "color": {
+                          "type": "string",
+                          "enum": [
+                            "gray",
+                            "purple",
+                            "blue",
+                            "green",
+                            "yellow",
+                            "orange",
+                            "red",
+                            "pink"
+                          ],
+                          "description": "The tag's color.",
+                          "example": "red"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Date and time the tag was created.",
+                          "example": "2026-10-05T19:04:22.118Z"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The name or slug is invalid or already used, or the workplace has reached its tag limit.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"A tag with this name already exists.\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "A tag with this name already exists."
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/workplace/tags/tag/{tag}": {
+      "get": {
+        "summary": "Retrieve",
+        "operationId": "tags-get",
+        "deprecated": false,
+        "description": "Retrieve a tag. Any member of the workplace can retrieve tags.",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "description": "The tag's slug.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The tag.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"tag\": {\n    \"slug\": \"pci\",\n    \"name\": \"PCI\",\n    \"color\": \"red\",\n    \"created_at\": \"2026-10-05T19:04:22.118Z\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tag": {
+                      "type": "object",
+                      "properties": {
+                        "slug": {
+                          "type": "string",
+                          "description": "The tag's unique identifier. Use it to refer to the tag in other API calls. Can't be changed.",
+                          "example": "pci"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "The tag's display name.",
+                          "example": "PCI"
+                        },
+                        "color": {
+                          "type": "string",
+                          "enum": [
+                            "gray",
+                            "purple",
+                            "blue",
+                            "green",
+                            "yellow",
+                            "orange",
+                            "red",
+                            "pink"
+                          ],
+                          "description": "The tag's color.",
+                          "example": "red"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Date and time the tag was created.",
+                          "example": "2026-10-05T19:04:22.118Z"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The tag doesn't exist.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"Tag does not exist\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "Tag does not exist"
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete",
+        "operationId": "tags-delete",
+        "deprecated": false,
+        "description": "Delete a tag. A tag can't be deleted while it's assigned to any project, so remove it from every project first. Requires the `tags_delete` workplace permission.",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "description": "The tag's slug.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The tag was deleted. The response has no body."
+          },
+          "400": {
+            "description": "The tag is assigned to one or more projects.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"This tag cannot be deleted because it is assigned to one or more projects.\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "This tag cannot be deleted because it is assigned to one or more projects."
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The tag doesn't exist.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"Tag does not exist\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "Tag does not exist"
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Update",
+        "operationId": "tags-update",
+        "deprecated": false,
+        "description": "Rename a tag or change its color. You must specify at least one of `name` or `color`. A tag's slug can't be changed. Requires the `tags_update` workplace permission.",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "description": "The tag's slug.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The tag's name. Between 1 and 32 characters. Must be unique in the workplace, regardless of capitalization."
+                  },
+                  "color": {
+                    "type": "string",
+                    "enum": [
+                      "gray",
+                      "purple",
+                      "blue",
+                      "green",
+                      "yellow",
+                      "orange",
+                      "red",
+                      "pink"
+                    ],
+                    "description": "The tag's color."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated tag.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"tag\": {\n    \"slug\": \"pci\",\n    \"name\": \"PCI\",\n    \"color\": \"red\",\n    \"created_at\": \"2026-10-05T19:04:22.118Z\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tag": {
+                      "type": "object",
+                      "properties": {
+                        "slug": {
+                          "type": "string",
+                          "description": "The tag's unique identifier. Use it to refer to the tag in other API calls. Can't be changed.",
+                          "example": "pci"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "The tag's display name.",
+                          "example": "PCI"
+                        },
+                        "color": {
+                          "type": "string",
+                          "enum": [
+                            "gray",
+                            "purple",
+                            "blue",
+                            "green",
+                            "yellow",
+                            "orange",
+                            "red",
+                            "pink"
+                          ],
+                          "description": "The tag's color.",
+                          "example": "red"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Date and time the tag was created.",
+                          "example": "2026-10-05T19:04:22.118Z"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Neither `name` nor `color` was specified, or the name is invalid or already used.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"You must specify name or color\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "You must specify name or color"
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The tag doesn't exist.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"messages\": [\n    \"Tag does not exist\"\n  ],\n  \"success\": false\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "Tag does not exist"
+                      }
+                    },
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/v3/workplace/users": {
