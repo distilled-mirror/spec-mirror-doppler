@@ -444,6 +444,7 @@
 - [Workplace User](https://docs.doppler.com/reference/audit-get_user.md): Get a specific user in a workplace
 
 ## Changelog
+- [September 2026](https://docs.doppler.com/changelog/september-2026.md)
 - [August 2026](https://docs.doppler.com/changelog/august-2026.md)
 - [July 2026](https://docs.doppler.com/changelog/july-2026.md)
 - [June 2026](https://docs.doppler.com/changelog/june-2026.md)
@@ -453,4 +454,3 @@
 - [February 2026](https://docs.doppler.com/changelog/february-2026.md)
 - [January 2026](https://docs.doppler.com/changelog/january-2026.md)
 - [December 2025](https://docs.doppler.com/changelog/december-2025.md)
-- [November 2025](https://docs.doppler.com/changelog/november-2025.md)
