@@ -11,47 +11,54 @@
 - [Secrets Rotation](https://docs.doppler.com/docs/secretops-beginners-series-secrets-rotation.md): Understand Doppler's proxied and API secrets rotation models, learn how to eliminate the risk of downtime with the two secret strategy, and set up secrets rotation for database credentials, IAM…
 
 ## Documentation: Development
-- [Install CLI](https://docs.doppler.com/docs/install-cli.md): Install the Doppler CLI in local development and production environments.
-- [CLI Guide](https://docs.doppler.com/docs/cli.md): Learn how to get up and running with the Doppler CLI to inject secrets into your applications.
-- [Automatic Restart](https://docs.doppler.com/docs/automatic-restart.md)
-- [Text-based UI (TUI)](https://docs.doppler.com/docs/tui.md): Learn how to use the Doppler TUI to quickly view and edit secrets in your terminal.
-- [Secrets Setup Guide](https://docs.doppler.com/docs/secrets-setup-guide.md): Learn how to setup your project to access secrets for a specific config
-- [Secrets Access Guide](https://docs.doppler.com/docs/accessing-secrets.md)
-- [Secrets Setting Guide](https://docs.doppler.com/docs/setting-secrets.md)
-- [Secret Injection with Templates](https://docs.doppler.com/docs/secret-injection-with-templates.md)
-- [Multiple Commands](https://docs.doppler.com/docs/multiple-commands.md)
-- [Multiple Workplaces](https://docs.doppler.com/docs/multiple-workplaces.md): Learn how to use the CLI across multiple workplaces
-- [Secret Fallback Files](https://docs.doppler.com/docs/automatic-fallbacks.md)
-- [Configure CLI Behavior](https://docs.doppler.com/docs/environment-based-configuration.md)
-- [Troubleshooting](https://docs.doppler.com/docs/cli-troubleshooting.md): Doppler CLI troubleshooting tips.
+- Command Line
+  - [Install CLI](https://docs.doppler.com/docs/install-cli.md): Install the Doppler CLI in local development and production environments.
+  - [CLI Guide](https://docs.doppler.com/docs/cli.md): Learn how to get up and running with the Doppler CLI to inject secrets into your applications.
+  - [Automatic Restart](https://docs.doppler.com/docs/automatic-restart.md)
+  - [Text-based UI (TUI)](https://docs.doppler.com/docs/tui.md): Learn how to use the Doppler TUI to quickly view and edit secrets in your terminal.
+  - [Secrets Setup Guide](https://docs.doppler.com/docs/secrets-setup-guide.md): Learn how to setup your project to access secrets for a specific config
+  - [Secrets Access Guide](https://docs.doppler.com/docs/accessing-secrets.md)
+  - [Secrets Setting Guide](https://docs.doppler.com/docs/setting-secrets.md)
+  - [Secret Injection with Templates](https://docs.doppler.com/docs/secret-injection-with-templates.md)
+  - [Multiple Commands](https://docs.doppler.com/docs/multiple-commands.md)
+  - [Multiple Workplaces](https://docs.doppler.com/docs/multiple-workplaces.md): Learn how to use the CLI across multiple workplaces
+  - [Secret Fallback Files](https://docs.doppler.com/docs/automatic-fallbacks.md)
+  - [Configure CLI Behavior](https://docs.doppler.com/docs/environment-based-configuration.md)
+  - [Troubleshooting](https://docs.doppler.com/docs/cli-troubleshooting.md): Doppler CLI troubleshooting tips.
 - [MCP Server](https://docs.doppler.com/docs/mcp.md): Give agentic tools the ability to interface with the Doppler API.
-- [Visual Studio Code](https://docs.doppler.com/docs/editors-vs-code.md): Level up how you manage secrets locally by integrating Doppler with Visual Studio code.
-  - [VSCode Extension](https://docs.doppler.com/docs/vscode-extension.md): Learn how to install and use Doppler's official VSCode extension to manage your secrets.
-  - [Go](https://docs.doppler.com/docs/vscode-go.md)
-  - [Node.js](https://docs.doppler.com/docs/vscode-nodejs.md): Secure secrets injection for Node.js applications in Visual Studio Code.
-  - [Python](https://docs.doppler.com/docs/vscode-python.md): Secure secrets injection for Python applications in Visual Studio Code.
-  - [Ruby](https://docs.doppler.com/docs/vscode-ruby.md)
-- [PyCharm](https://docs.doppler.com/docs/pycharm.md)
-- [WebStorm](https://docs.doppler.com/docs/webstorm.md): Learn how to debug Node.js and web applications applications in WebStorm with secrets injected by the Doppler CLI.
-- [Node.js](https://docs.doppler.com/docs/sdk-javascript.md)
-- [Python](https://docs.doppler.com/docs/sdk-python.md)
-- [Other](https://docs.doppler.com/docs/other.md)
-- [C#](https://docs.doppler.com/docs/asp-net-core-csharp.md): Fetch secrets for your C# ASP.NET Core application using the Doppler API.
-- [Ruby](https://docs.doppler.com/docs/ruby.md): Learn how to use Doppler with Ruby applications
-- [Ecto](https://docs.doppler.com/docs/ecto.md): Learn how Doppler can securely store and sync database credentials for your Elixir applications using Ecto by dynamically generating a config/*.exs file at runtime.
-- [PM2](https://docs.doppler.com/docs/pm2.md)
-- [Vite.js](https://docs.doppler.com/docs/vitejs-and-sveltejs.md): Say goodbye to .env files and hello to Doppler as your environment variable manager for Vite and Svelte-powered applications.
+- Editors
+  - [Visual Studio Code](https://docs.doppler.com/docs/editors-vs-code.md): Level up how you manage secrets locally by integrating Doppler with Visual Studio code.
+    - [VSCode Extension](https://docs.doppler.com/docs/vscode-extension.md): Learn how to install and use Doppler's official VSCode extension to manage your secrets.
+    - [Go](https://docs.doppler.com/docs/vscode-go.md)
+    - [Node.js](https://docs.doppler.com/docs/vscode-nodejs.md): Secure secrets injection for Node.js applications in Visual Studio Code.
+    - [Python](https://docs.doppler.com/docs/vscode-python.md): Secure secrets injection for Python applications in Visual Studio Code.
+    - [Ruby](https://docs.doppler.com/docs/vscode-ruby.md)
+  - [PyCharm](https://docs.doppler.com/docs/pycharm.md)
+  - [WebStorm](https://docs.doppler.com/docs/webstorm.md): Learn how to debug Node.js and web applications applications in WebStorm with secrets injected by the Doppler CLI.
+- SDKs
+  - [Node.js](https://docs.doppler.com/docs/sdk-javascript.md)
+  - [Python](https://docs.doppler.com/docs/sdk-python.md)
+  - [Other](https://docs.doppler.com/docs/other.md)
+- Languages
+  - [C#](https://docs.doppler.com/docs/asp-net-core-csharp.md): Fetch secrets for your C# ASP.NET Core application using the Doppler API.
+  - [Ruby](https://docs.doppler.com/docs/ruby.md): Learn how to use Doppler with Ruby applications
+- Frameworks
+  - [Ecto](https://docs.doppler.com/docs/ecto.md): Learn how Doppler can securely store and sync database credentials for your Elixir applications using Ecto by dynamically generating a config/*.exs file at runtime.
+  - [PM2](https://docs.doppler.com/docs/pm2.md)
+  - [Vite.js](https://docs.doppler.com/docs/vitejs-and-sveltejs.md): Say goodbye to .env files and hello to Doppler as your environment variable manager for Vite and Svelte-powered applications.
 - [Terraform CDK](https://docs.doppler.com/docs/terraform-cdk.md): Learn how to use the Doppler Terraform Provider with Terraform CDK.
 - [Universal Import Guide](https://docs.doppler.com/docs/universal-import-guide.md)
 
 ## Documentation: Integrations
 - [Integration Access Scoping](https://docs.doppler.com/docs/integration-access-scoping.md): Learn how to control who can create and use integration connections
 - [Automated Syncs](https://docs.doppler.com/docs/integrations.md): Numerous ways to integrate Doppler
-  - [AWS Secrets Manager](https://docs.doppler.com/docs/aws-secrets-manager.md): Sync environment variables to AWS Secrets Manager.
-  - [AWS Parameter Store](https://docs.doppler.com/docs/aws-parameter-store.md): Sync environment variables to AWS Parameter Store.
-  - [Azure App Service](https://docs.doppler.com/docs/azure-app-service.md): Learn how to easily sync environment variables to Azure App Service.
-  - [Azure Key Vault](https://docs.doppler.com/docs/azure-key-vault.md): Learn how to easily sync environment variables to Azure Key Vault.
-  - [Azure DevOps Pipelines](https://docs.doppler.com/docs/azure-devops-pipelines.md): Learn how to easily manage environment variables for your Azure DevOps Pipelines.
+  - AWS
+    - [AWS Secrets Manager](https://docs.doppler.com/docs/aws-secrets-manager.md): Sync environment variables to AWS Secrets Manager.
+    - [AWS Parameter Store](https://docs.doppler.com/docs/aws-parameter-store.md): Sync environment variables to AWS Parameter Store.
+  - Azure
+    - [Azure App Service](https://docs.doppler.com/docs/azure-app-service.md): Learn how to easily sync environment variables to Azure App Service.
+    - [Azure Key Vault](https://docs.doppler.com/docs/azure-key-vault.md): Learn how to easily sync environment variables to Azure Key Vault.
+    - [Azure DevOps Pipelines](https://docs.doppler.com/docs/azure-devops-pipelines.md): Learn how to easily manage environment variables for your Azure DevOps Pipelines.
   - [Bitbucket Pipelines](https://docs.doppler.com/docs/bitbucket-pipelines.md): Connect Doppler with Bitbucket to access your secrets from inside your pipelines
     - [Bitbucket Sync Integration](https://docs.doppler.com/docs/bitbucket-sync-integration.md): Learn how to use Doppler with Bitbucket Cloud Pipelines.
     - [Bitbucket + Doppler CLI](https://docs.doppler.com/docs/bitbucket-pipelines-doppler-cli.md): Learn how to easily manage environment variables for your Bitbucket Pipelines.
@@ -83,9 +90,10 @@
   - [Terraform Cloud](https://docs.doppler.com/docs/terraform-cloud.md): Learn how to sync your Doppler secrets to your Terraform Cloud projects.
   - [Vercel](https://docs.doppler.com/docs/vercel.md)
 - [DIY Syncs](https://docs.doppler.com/docs/diy-syncs.md)
-  - [AWS Lambda](https://docs.doppler.com/docs/aws-lambda.md): Learn how to easily manage environment variables for your AWS Lambda functions.
-  - [AWS Beanstalk](https://docs.doppler.com/docs/aws-beanstalk.md): Learn how to use Doppler with your AWS Beanstalk deployments.
-  - [AWS ECS](https://docs.doppler.com/docs/aws-ecs.md): Learn how to access Doppler secrets in your ECS tasks
+  - AWS
+    - [AWS Lambda](https://docs.doppler.com/docs/aws-lambda.md): Learn how to easily manage environment variables for your AWS Lambda functions.
+    - [AWS Beanstalk](https://docs.doppler.com/docs/aws-beanstalk.md): Learn how to use Doppler with your AWS Beanstalk deployments.
+    - [AWS ECS](https://docs.doppler.com/docs/aws-ecs.md): Learn how to access Doppler secrets in your ECS tasks
   - [BuddyCI](https://docs.doppler.com/docs/buddyci.md): Learn how to use Doppler to provide secrets to CI / CD pipelines in BuddyCI.
   - [Cloudflare Workers](https://docs.doppler.com/docs/cloudflare-workers.md)
   - [Cloud 66](https://docs.doppler.com/docs/cloud-66.md)
@@ -106,7 +114,8 @@
   - [Pipedream](https://docs.doppler.com/docs/pipedream.md): Learn how to inject Doppler secrets into your Pipedream steps.
   - [Serverless](https://docs.doppler.com/docs/serverless.md): Learn how to easily manage environment variables for your Serverless applications.
   - [Webapp.io](https://docs.doppler.com/docs/webapp-io.md)
-- [Terraform / OpenTofu](https://docs.doppler.com/docs/terraform.md): Learn how to use the Doppler Terraform Provider to manage your Doppler workplace using Terraform/OpenTofu
+- Infrastructure as Code (IaC)
+  - [Terraform / OpenTofu](https://docs.doppler.com/docs/terraform.md): Learn how to use the Doppler Terraform Provider to manage your Doppler workplace using Terraform/OpenTofu
 - [Kubernetes](https://docs.doppler.com/docs/kubernetes.md): Simplify secrets management for Kubernetes hosted applications using Doppler
   - [Doppler Kubernetes Operator](https://docs.doppler.com/docs/kubernetes-operator.md): Kubernetes secrets sync automation with deployment auto-reload on secrets change.
     - [Installation & Upgrades](https://docs.doppler.com/docs/doppler-k8s-operator-installation-upgrades.md): Learn how to install and upgrade the Doppler Kubernetes Operator
@@ -222,14 +231,15 @@
 - [Doppler Share Security](https://docs.doppler.com/docs/share-security.md): Learn more about Doppler Share's design and data flow
 
 ## Documentation: Support
-- [Windows Support](https://docs.doppler.com/docs/windows-support.md): Information on using Doppler under Windows.
-- [Doppler CLI GnuPG Requirement](https://docs.doppler.com/docs/doppler-cli-gnupg-requirement.md): Starting February 9, 2022, the GnuPG package will be required when installing the CLI via the shell script (install.sh) method or when updating the CLI via `doppler update`.
-- [Client.Timeout Exceeded Errors](https://docs.doppler.com/docs/client-timeout-exceeded-errors.md)
-- [Token not found in system keyring](https://docs.doppler.com/docs/token-not-found-in-system-keyring-error.md)
-- [Removal of Deprecated Clients](https://docs.doppler.com/docs/removal-deprecated-packages-scripts.md)
-- [Update Package Install Commands](https://docs.doppler.com/docs/update-package-install-commands.md)
-- [Migrating from @dopplerhq/cli](https://docs.doppler.com/docs/cli-migration.md)
-- [Cleaning Up AWS EKM keys](https://docs.doppler.com/docs/cleaning-up-aws-ekm-keys.md)
+- Common Problems
+  - [Windows Support](https://docs.doppler.com/docs/windows-support.md): Information on using Doppler under Windows.
+  - [Doppler CLI GnuPG Requirement](https://docs.doppler.com/docs/doppler-cli-gnupg-requirement.md): Starting February 9, 2022, the GnuPG package will be required when installing the CLI via the shell script (install.sh) method or when updating the CLI via `doppler update`.
+  - [Client.Timeout Exceeded Errors](https://docs.doppler.com/docs/client-timeout-exceeded-errors.md)
+  - [Token not found in system keyring](https://docs.doppler.com/docs/token-not-found-in-system-keyring-error.md)
+  - [Removal of Deprecated Clients](https://docs.doppler.com/docs/removal-deprecated-packages-scripts.md)
+  - [Update Package Install Commands](https://docs.doppler.com/docs/update-package-install-commands.md)
+  - [Migrating from @dopplerhq/cli](https://docs.doppler.com/docs/cli-migration.md)
+  - [Cleaning Up AWS EKM keys](https://docs.doppler.com/docs/cleaning-up-aws-ekm-keys.md)
 - [FAQS](https://docs.doppler.com/docs/faqs.md)
 - [Doppler SLO](https://docs.doppler.com/docs/service-sla.md)
 
