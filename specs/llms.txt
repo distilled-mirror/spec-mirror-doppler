@@ -53,8 +53,8 @@
 - [Integration Access Scoping](https://docs.doppler.com/docs/integration-access-scoping.md): Learn how to control who can create and use integration connections
 - [Automated Syncs](https://docs.doppler.com/docs/integrations.md): Numerous ways to integrate Doppler
   - AWS
-    - [AWS Secrets Manager](https://docs.doppler.com/docs/aws-secrets-manager.md): Sync environment variables to AWS Secrets Manager.
     - [AWS Parameter Store](https://docs.doppler.com/docs/aws-parameter-store.md): Sync environment variables to AWS Parameter Store.
+    - [AWS Secrets Manager](https://docs.doppler.com/docs/aws-secrets-manager.md): Sync environment variables to AWS Secrets Manager.
   - Azure
     - [Azure App Service](https://docs.doppler.com/docs/azure-app-service.md): Learn how to easily sync environment variables to Azure App Service.
     - [Azure Key Vault](https://docs.doppler.com/docs/azure-key-vault.md): Learn how to easily sync environment variables to Azure Key Vault.
@@ -62,9 +62,9 @@
   - [Bitbucket Pipelines](https://docs.doppler.com/docs/bitbucket-pipelines.md): Connect Doppler with Bitbucket to access your secrets from inside your pipelines
     - [Bitbucket Sync Integration](https://docs.doppler.com/docs/bitbucket-sync-integration.md): Learn how to use Doppler with Bitbucket Cloud Pipelines.
     - [Bitbucket + Doppler CLI](https://docs.doppler.com/docs/bitbucket-pipelines-doppler-cli.md): Learn how to easily manage environment variables for your Bitbucket Pipelines.
-  - [Codefresh](https://docs.doppler.com/docs/codefresh.md): Learn how to use Doppler with your Codefresh pipelines.
   - [CircleCI](https://docs.doppler.com/docs/circleci.md): Learn how to easily sync environment variables to CircleCI.
   - [Cloudflare Pages](https://docs.doppler.com/docs/cloudflare-pages.md): Learn how to sync your Doppler secrets with Cloudflare Pages
+  - [Codefresh](https://docs.doppler.com/docs/codefresh.md): Learn how to use Doppler with your Codefresh pipelines.
   - [Deno Deploy](https://docs.doppler.com/docs/deno-deploy.md): Learn how to use Doppler with your Deno Deploy projects.
   - [DigitalOcean App Platform](https://docs.doppler.com/docs/digitalocean-app-platform.md)
   - [Fly.io](https://docs.doppler.com/docs/flyio.md): Learn how to use Doppler with your Fly.io hosted applications.
