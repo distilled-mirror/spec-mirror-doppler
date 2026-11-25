@@ -5271,7 +5271,7 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"members\": [{\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"]\n  }]\n}"
+                    "value": "{\n  \"members\": [{\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"roles\": [{\n    \t\"role\": {\n    \t\t\"identifier\": \"collaborator\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"dev\"],\n    \t\"configs\": []\n    }]\n  }]\n}"
                   }
                 },
                 "schema": {
@@ -5309,6 +5309,43 @@
                             "items": {
                               "type": "string",
                               "example": "dev"
+                            }
+                          },
+                          "roles": {
+                            "type": "array",
+                            "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "role": {
+                                  "type": "object",
+                                  "properties": {
+                                    "identifier": {
+                                      "type": "string",
+                                      "example": "collaborator"
+                                    }
+                                  }
+                                },
+                                "access_all_environments": {
+                                  "type": "boolean",
+                                  "example": false,
+                                  "default": true
+                                },
+                                "environments": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "example": "dev"
+                                  }
+                                },
+                                "configs": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "example": "prd_aws"
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -5383,7 +5420,7 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"]\n  }\n}"
+                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"roles\": [{\n    \t\"role\": {\n    \t\t\"identifier\": \"collaborator\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"dev\"],\n    \t\"configs\": []\n    }]\n  }\n}"
                   }
                 },
                 "schema": {
@@ -5419,6 +5456,43 @@
                           "items": {
                             "type": "string",
                             "example": "dev"
+                          }
+                        },
+                        "roles": {
+                          "type": "array",
+                          "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "role": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string",
+                                    "example": "collaborator"
+                                  }
+                                }
+                              },
+                              "access_all_environments": {
+                                "type": "boolean",
+                                "example": false,
+                                "default": true
+                              },
+                              "environments": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "dev"
+                                }
+                              },
+                              "configs": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "prd_aws"
+                                }
+                              }
+                            }
                           }
                         }
                       }
@@ -5478,7 +5552,7 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"]\n  }\n}"
+                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"roles\": [{\n    \t\"role\": {\n    \t\t\"identifier\": \"collaborator\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"dev\"],\n    \t\"configs\": []\n    }]\n  }\n}"
                   }
                 },
                 "schema": {
@@ -5514,6 +5588,43 @@
                           "items": {
                             "type": "string",
                             "example": "dev"
+                          }
+                        },
+                        "roles": {
+                          "type": "array",
+                          "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "role": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string",
+                                    "example": "collaborator"
+                                  }
+                                }
+                              },
+                              "access_all_environments": {
+                                "type": "boolean",
+                                "example": false,
+                                "default": true
+                              },
+                              "environments": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "dev"
+                                }
+                              },
+                              "configs": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "prd_aws"
+                                }
+                              }
+                            }
                           }
                         }
                       }
@@ -5582,7 +5693,7 @@
       },
       "patch": {
         "summary": "Update",
-        "description": "",
+        "description": "Replaces every role the member holds on the project with the given role and environments. To change one of several roles, use the role assignment endpoints.",
         "operationId": "project_members-update",
         "parameters": [
           {
@@ -5647,7 +5758,7 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"]\n  }\n}"
+                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"roles\": [{\n    \t\"role\": {\n    \t\t\"identifier\": \"collaborator\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"dev\"],\n    \t\"configs\": []\n    }]\n  }\n}"
                   }
                 },
                 "schema": {
@@ -5684,6 +5795,43 @@
                             "type": "string",
                             "example": "dev"
                           }
+                        },
+                        "roles": {
+                          "type": "array",
+                          "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "role": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string",
+                                    "example": "collaborator"
+                                  }
+                                }
+                              },
+                              "access_all_environments": {
+                                "type": "boolean",
+                                "example": false,
+                                "default": true
+                              },
+                              "environments": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "dev"
+                                }
+                              },
+                              "configs": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "prd_aws"
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -5694,6 +5842,594 @@
           }
         },
         "deprecated": false
+      }
+    },
+    "/v3/projects/project/members/member/{type}/{slug}/roles": {
+      "get": {
+        "summary": "List Roles",
+        "description": "List every role the member holds on the project.",
+        "operationId": "project_members-roles-list",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "description": "Project slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "workplace_user",
+                "group",
+                "invite",
+                "service_account"
+              ]
+            },
+            "required": true
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "Member's slug",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "roles": {
+                      "type": "array",
+                      "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "role": {
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string",
+                                "example": "collaborator"
+                              }
+                            }
+                          },
+                          "access_all_environments": {
+                            "type": "boolean",
+                            "example": false,
+                            "default": true
+                          },
+                          "environments": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "example": "dev"
+                            }
+                          },
+                          "configs": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "example": "prd_aws"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"roles\": [{\n    \"role\": {\n    \t\"identifier\": \"viewer\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"configs\": []\n  }, {\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"stg\"],\n    \"configs\": []\n  }]\n}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add Role",
+        "description": "Add a role to a member who may already hold other roles on the project.",
+        "operationId": "project_members-roles-add",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "description": "Project slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "workplace_user",
+                "group",
+                "invite",
+                "service_account"
+              ]
+            },
+            "required": true
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "Member's slug",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "role"
+                ],
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "description": "Identifier of the project role"
+                  },
+                  "environments": {
+                    "type": "array",
+                    "description": "Environment slugs this role applies to",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "configs": {
+                    "type": "array",
+                    "description": "Config names this role applies to. See: https://docs.doppler.com/docs/advanced-permissions#grant-access-to-individual-configs",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"viewer\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"roles\": [{\n    \t\"role\": {\n    \t\t\"identifier\": \"viewer\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"dev\"],\n    \t\"configs\": []\n    }, {\n    \t\"role\": {\n    \t\t\"identifier\": \"collaborator\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"stg\"],\n    \t\"configs\": []\n    }]\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "member": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "workplace_user"
+                        },
+                        "slug": {
+                          "type": "string",
+                          "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "role": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string",
+                              "example": "collaborator"
+                            }
+                          }
+                        },
+                        "access_all_environments": {
+                          "type": "boolean",
+                          "example": false,
+                          "default": true
+                        },
+                        "environments": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "example": "dev"
+                          }
+                        },
+                        "roles": {
+                          "type": "array",
+                          "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "role": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string",
+                                    "example": "collaborator"
+                                  }
+                                }
+                              },
+                              "access_all_environments": {
+                                "type": "boolean",
+                                "example": false,
+                                "default": true
+                              },
+                              "environments": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "dev"
+                                }
+                              },
+                              "configs": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "prd_aws"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/projects/project/members/member/{type}/{slug}/roles/role/{role}": {
+      "get": {
+        "summary": "Retrieve Role",
+        "description": "Retrieve one of the member's roles on the project.",
+        "operationId": "project_members-roles-get",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "description": "Project slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "workplace_user",
+                "group",
+                "invite",
+                "service_account"
+              ]
+            },
+            "required": true
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "Member's slug",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "role",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Identifier of the project role, e.g. `collaborator` or a custom role's identifier"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "object",
+                      "properties": {
+                        "role": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string",
+                              "example": "collaborator"
+                            }
+                          }
+                        },
+                        "access_all_environments": {
+                          "type": "boolean",
+                          "example": false,
+                          "default": true
+                        },
+                        "environments": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "example": "dev"
+                          }
+                        },
+                        "configs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "example": "prd_aws"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"role\": {\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"stg\"],\n    \"configs\": []\n  }\n}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Role",
+        "description": "Remove one of the member's roles on the project. The member keeps any other roles.",
+        "operationId": "project_members-roles-delete",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "workplace_user",
+                "group",
+                "invite",
+                "service_account"
+              ]
+            }
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "Member's slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "project",
+            "in": "query",
+            "description": "Project slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "role",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Identifier of the project role, e.g. `collaborator` or a custom role's identifier"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "204",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": ""
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Update Role",
+        "description": "Replace the environments and configs one of the member's roles applies to.",
+        "operationId": "project_members-roles-update",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "workplace_user",
+                "group",
+                "invite",
+                "service_account"
+              ]
+            }
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "Member's slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "project",
+            "in": "query",
+            "description": "Project slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "role",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Identifier of the project role, e.g. `collaborator` or a custom role's identifier"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "environments"
+                ],
+                "properties": {
+                  "environments": {
+                    "type": "array",
+                    "description": "Environment slugs this role applies to",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "configs": {
+                    "type": "array",
+                    "description": "Config names this role applies to. Omit to keep the role's current configs. See: https://docs.doppler.com/docs/advanced-permissions#grant-access-to-individual-configs",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"viewer\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"roles\": [{\n    \t\"role\": {\n    \t\t\"identifier\": \"viewer\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"dev\"],\n    \t\"configs\": []\n    }, {\n    \t\"role\": {\n    \t\t\"identifier\": \"collaborator\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"stg\"],\n    \t\"configs\": []\n    }]\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "member": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "workplace_user"
+                        },
+                        "slug": {
+                          "type": "string",
+                          "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "role": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string",
+                              "example": "collaborator"
+                            }
+                          }
+                        },
+                        "access_all_environments": {
+                          "type": "boolean",
+                          "example": false,
+                          "default": true
+                        },
+                        "environments": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "example": "dev"
+                          }
+                        },
+                        "roles": {
+                          "type": "array",
+                          "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "role": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string",
+                                    "example": "collaborator"
+                                  }
+                                }
+                              },
+                              "access_all_environments": {
+                                "type": "boolean",
+                                "example": false,
+                                "default": true
+                              },
+                              "environments": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "dev"
+                                }
+                              },
+                              "configs": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "prd_aws"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/v3/projects/project/note": {

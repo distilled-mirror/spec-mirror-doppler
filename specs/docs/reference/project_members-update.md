@@ -6,6 +6,8 @@ agentTools:
 
 # Update
 
+Replaces every role the member holds on the project with the given role and environments. To change one of several roles, use the role assignment endpoints.
+
 # OpenAPI definition
 
 ```json
@@ -37,7 +39,7 @@ agentTools:
     "/v3/projects/project/members/member/{type}/{slug}": {
       "patch": {
         "summary": "Update",
-        "description": "",
+        "description": "Replaces every role the member holds on the project with the given role and environments. To change one of several roles, use the role assignment endpoints.",
         "operationId": "project_members-update",
         "parameters": [
           {
@@ -102,7 +104,7 @@ agentTools:
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"]\n  }\n}"
+                    "value": "{\n  \"member\": {\n    \"type\": \"workplace_user\",\n    \"slug\": \"00000000-0000-0000-0000-000000000000\",\n    \"role\": {\n    \t\"identifier\": \"collaborator\"\n    },\n    \"access_all_environments\": false,\n    \"environments\": [\"dev\"],\n    \"roles\": [{\n    \t\"role\": {\n    \t\t\"identifier\": \"collaborator\"\n    \t},\n    \t\"access_all_environments\": false,\n    \t\"environments\": [\"dev\"],\n    \t\"configs\": []\n    }]\n  }\n}"
                   }
                 },
                 "schema": {
@@ -138,6 +140,43 @@ agentTools:
                           "items": {
                             "type": "string",
                             "example": "dev"
+                          }
+                        },
+                        "roles": {
+                          "type": "array",
+                          "description": "Every role the member holds on the project, oldest first. `role` and `environments` describe the first entry.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "role": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string",
+                                    "example": "collaborator"
+                                  }
+                                }
+                              },
+                              "access_all_environments": {
+                                "type": "boolean",
+                                "example": false,
+                                "default": true
+                              },
+                              "environments": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "dev"
+                                }
+                              },
+                              "configs": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "prd_aws"
+                                }
+                              }
+                            }
                           }
                         }
                       }

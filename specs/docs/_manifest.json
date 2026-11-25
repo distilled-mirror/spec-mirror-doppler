@@ -1,6 +1,6 @@
 {
   "source": "https://docs.doppler.com/llms.txt",
-  "count": 148,
+  "count": 153,
   "pages": [
     {
       "page": "https://docs.doppler.com/reference/activity_logs-list",
@@ -356,6 +356,31 @@
       "page": "https://docs.doppler.com/reference/project_members-list",
       "markdown": "https://docs.doppler.com/reference/project_members-list.md",
       "file": "reference/project_members-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-roles-add",
+      "markdown": "https://docs.doppler.com/reference/project_members-roles-add.md",
+      "file": "reference/project_members-roles-add.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-roles-delete",
+      "markdown": "https://docs.doppler.com/reference/project_members-roles-delete.md",
+      "file": "reference/project_members-roles-delete.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-roles-get",
+      "markdown": "https://docs.doppler.com/reference/project_members-roles-get.md",
+      "file": "reference/project_members-roles-get.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-roles-list",
+      "markdown": "https://docs.doppler.com/reference/project_members-roles-list.md",
+      "file": "reference/project_members-roles-list.md"
+    },
+    {
+      "page": "https://docs.doppler.com/reference/project_members-roles-update",
+      "markdown": "https://docs.doppler.com/reference/project_members-roles-update.md",
+      "file": "reference/project_members-roles-update.md"
     },
     {
       "page": "https://docs.doppler.com/reference/project_members-update",

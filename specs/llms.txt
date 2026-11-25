@@ -290,8 +290,13 @@
 - [List](https://docs.doppler.com/reference/project_members-list.md)
 - [Retrieve](https://docs.doppler.com/reference/project_members-get.md)
 - [Add](https://docs.doppler.com/reference/project_members-add.md)
-- [Update](https://docs.doppler.com/reference/project_members-update.md)
+- [Update](https://docs.doppler.com/reference/project_members-update.md): Replaces every role the member holds on the project with the given role and environments. To change one of several roles, use the role assignment endpoints.
 - [Delete](https://docs.doppler.com/reference/project_members-delete.md)
+- [List Roles](https://docs.doppler.com/reference/project_members-roles-list.md): List every role the member holds on the project.
+- [Add Role](https://docs.doppler.com/reference/project_members-roles-add.md): Add a role to a member who may already hold other roles on the project.
+- [Retrieve Role](https://docs.doppler.com/reference/project_members-roles-get.md): Retrieve one of the member's roles on the project.
+- [Update Role](https://docs.doppler.com/reference/project_members-roles-update.md): Replace the environments and configs one of the member's roles applies to.
+- [Delete Role](https://docs.doppler.com/reference/project_members-roles-delete.md): Remove one of the member's roles on the project. The member keeps any other roles.
 
 ## API Reference: Project Tags
 - [List](https://docs.doppler.com/reference/project_tags-list.md): List the tags assigned to a project, sorted by name. Anyone who can view the project can list its tags.
